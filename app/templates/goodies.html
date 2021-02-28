@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class='hero'></section>
+
+    <section class='container'>
+
+      <h1 class='h1 text-center sub-font'> CAST </h2>
+      <hr class='people-hr border-dark mb-4' />
+      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='cast'>
+          {% for person in cast %}
+            <div class='col'>
+              <div class='mx-auto card flip-card text-dark mb-4 g-0'>
+                <div class='flip-inner'>
+                  <div class='card-img flip-front bg-light'>
+                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
+                  </div>
+                  <div class='card-body flip-back bg-light handwritten'>
+                    <h5 class='card-title'> {{person['name']}}</h5>
+                    <p class='card-text'>bio: {{person['bio']}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+      </section>
+
+        
+      <h1 class='h1 text-center sub-font'> CREW </h2>
+      <hr class='people-hr border-dark mb-4' />
+      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='crew'>
+          {% for person in crew %}
+            <div class='col'>
+              <div class='mx-auto card flip-card text-dark mb-4 g-0'>
+                <div class='flip-inner'>
+                  <div class='card-img flip-front bg-light'>
+                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
+                  </div>
+                  <div class='card-body flip-back bg-light handwritten'>
+                    <h5 class='card-title'> {{person['name']}}</h5>
+                    <p class='card-text'>bio: {{person['bio']}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+      </section>
+
+      <h1 class='h1 text-center sub-font'> BAND </h2>
+      <hr class='people-hr border-dark mb-4' />
+      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='band'>
+          {% for person in band %}
+            <div class='col'>
+              <div class=' card flip-card text-dark g-0'>
+                <div class='flip-inner'>
+                  <div class='card-img flip-front bg-light'>
+                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
+                  </div>
+                  <div class='card-body flip-back bg-light handwritten'>
+                    <h5 class='card-title'> {{person['name']}}</h5>
+                    <p class='card-text'>bio: {{person['bio']}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          {% endfor %}
+      </section>
+
+      <h1 class='h1 text-center sub-font'> CREATIVE </h2>
+      <hr class='people-hr border-dark mb-4' />
+      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='creative'>
+          {% for person in creative %}
+            <div class='col'>
+              <div class=' card flip-card text-dark g-0'>
+                <div class='flip-inner'>
+                  <div class='card-img flip-front bg-light'>
+                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
+                  </div>
+                  <div class='card-body flip-back bg-light handwritten'>
+                    <h5 class='card-title'> {{person['name']}}</h5>
+                    <p class='card-text'>bio: {{person['bio']}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          {% endfor %}
+      </section>
+    </section>
+
+
+
+
+
+
+{% endblock %}

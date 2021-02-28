@@ -1,0 +1,185 @@
+/******* COLOURS ********
+ * 3C3C3C -- Jet Grey   *
+ * FEFCFB -- White      *
+ * 7D001C -- Burgundy   *
+ * C99200 -- Gold (A1)  *
+ * F3E0D9 -- Pink (A2)  *
+ ************************/
+
+/* Shared structure */
+
+body {
+    font-family: "Oxygen", "Arial";
+    position: relative;
+}
+
+.navbar {
+    box-shadow: 0 -8px 12px 2px #111;
+    z-index: 1000; 
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Curtain background */
+.curtain-wrapper {   
+    width: 100%;
+    height: 100%;
+}
+
+.curtain {
+    background-image: url('../../static/img/curtain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    position: relative;
+    transition: transform 1s ease-out;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ div.curtain-left {
+    transform: rotateY(180deg) translateX(0);
+}
+
+input[type=checkbox]:checked ~ div.curtain-right {
+    transform: translateX(0);
+}
+
+.curtain-left {
+    transform: rotateY(180deg) translateX(105%);
+}
+
+.curtain-right {
+    transform: translateX(105%);
+}
+
+/* Intro page */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.projected-text {
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: 200;
+    transition: top 1s, bottom 1s, margin 1s, padding 1s, left 1s, right 1s;
+}
+
+.projected-text:nth-of-type(1) {
+    animation-delay: 1s;
+}
+.projected-text:nth-of-type(2) {
+    animation-delay: 2s;
+}
+.projected-text:nth-of-type(3) {
+    animation-delay: 3s;
+}
+.projected-text:nth-of-type(4) {
+    animation-delay: 4s;
+}
+.projected-text:nth-of-type(5) {
+    animation-delay: 5s;
+}
+
+/* Video */
+.video-wrapper {
+    z-index: 250;
+}
+
+/* People Page */
+.card {
+    border: none;
+}
+
+.people-group {
+}
+
+
+.people-hr {
+    height: 150px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px 0 0 0;
+    border-radius: 130px 0 0 0;
+}
+
+.flip-card {
+    perspective: 1000px;
+    background-color: transparent;
+    width: 450px;
+    height: 300px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+/* Helpers for positioning */
+
+.reversed {
+    transform: rotateY(180deg);
+    transition: none;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Gellardo";
+    src: url('../../static/fonts/gellardo.otf');
+}
+
+.logo-font {
+    font-family: "Allentown", "Helvetica";
+}
+
+.sub-font {
+    font-family: "casablanca-urw", sans-serif;
+}
+
+.sub-font-light {
+    font-family: "casablanca-urw", sans-serif;
+    font-weight: 300;
+}
+
+.handwritten {
+    font-family: "Gellardo", "Times New Roman";
+}

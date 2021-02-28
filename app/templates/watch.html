@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class='container-fluid curtain-wrapper'>
+        <input type='checkbox' checked>
+
+        <div class='curtain curtain-left'></div>
+
+        <div class='curtain curtain-right'></div>
+
+    </div>
+    
+    <div class='video-wrapper position-relative'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NUYvbT6vTPs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Spotlights -->
+
+    <div class='spotlight-wrapper'>
+        <div class='spotlight spotlight-left'></div>
+        <div class='spotlight spotlight-right reversed'></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class='container-fluid curtain-wrapper'>
+        <input type='checkbox' checked>
+
+        <div class='curtain curtain-left'></div>
+        <div class='curtain curtain-right'></div>
+
+        
+        <!-- Text Animation -->
+
+        <div class='position-absolute top-50 start-50 translate-middle container d-grid gap-3 p-4 rounded'>
+            <div class='projected-text text-center text-secondary text-uppercase fs-1'>
+                Welcome to SkuleNite 2T1!
+            </div>
+
+            <div class='projected-text text-center text-secondary text-uppercase fs-1'>
+                As you can see, we've done things a little differently this year.
+            </div>
+
+            <div class='projected-text text-center text-secondary text-uppercase fs-1'>
+                Instead of you going out to see SkuleNite, we've brought SkuleNite right to you!
+            </div>
+
+            <div class='projected-text text-center text-secondary text-uppercase fs-1'>
+                Are you ready?
+            </div>
+
+            <div class='projected-text text-center text-secondary text-uppercase fs-1'>
+                <button type='button' class='btn btn-primary btn-lg fs-1'>Watch the show!</button>
+            </div>
+        </div>
+
+    </div>
+
+  
+    <!-- Spotlights --> 
+
+    <div class='spotlight-wrapper'>
+        <div class='spotlight spotlight-left'></div>
+        <div class='spotlight spotlight-right reversed'></div>
+    </div>
+{% endblock %}
+
