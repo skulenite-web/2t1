@@ -1,3 +1,6 @@
+{% set hero = hero|default("active") %}
+{% set nav = nav|default("active") %}
+
 <html>
     <head>
         <title>SkuleNite 2T1</title>
@@ -7,6 +10,11 @@
         <link rel='stylesheet' href='{{ url_for('static', filename='css/main.css') }}'>
         <script src='{{ url_for('static', filename='bootstrap/bootstrap.bundle.min.js') }}'></script>
         
+        <!-- Custom JS -->
+        <script src="{{ url_for('static', filename='js/scroll.js') }}" type="text/javascript"></script>
+        {% block curtain_scroll %}{% endblock %}
+        {% block team_js %}{% endblock %}
+
         <!-- Favicon -->
         <link rel="icon" type="image/png" sizes="96x96" href='{{ url_for('static', filename='img/favicon-96x96.png') }}'>
         <link rel="icon" type="image/png" sizes="32x32" href='{{ url_for('static', filename='img/favicon-96x96.png') }}'>
@@ -18,9 +26,15 @@
         <link href="https://use.typekit.net/gbb4rnm.css" rel="stylesheet">
     </head>
     <body class="bg-info text-dark">
-        <nav class="navbar navbar-expand-md navbar-light bg-info">
+        {% if hero == "active" %}
+        <div class="jumbotron text-light jumbotron-image {% if nav == 'inactive' %}mb-4 {% endif %}" style="background-image: url( {{ url_for('static', filename='img/hero.png') }} );">
+        </div>
+        {% endif %}
+
+        {% if nav == "active" %}
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow mb-4" id="navbar">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" id="nav-logo" href="#">
                 <img src='{{ url_for('static', filename='img/logo_nav.png') }}' width=80px>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-controls="navToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,27 +43,31 @@
             <div class="collapse navbar-collapse" id="navToggle">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 sub-font">
                 <li class="nav-item">
-                  <a class="nav-link active fs-2" aria-current="page" href="#">Watch</a>
+                  <a class="nav-link {% block nav_watch %}{% endblock %} fs-2" aria-current="page" href="{{ url_for('watch') }}">Watch</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-2" href="{{ url_for('team') }}">Team</a>
+                  <a class="nav-link {% block nav_team %}{% endblock %} fs-2" href="{{ url_for('team') }}">Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-2" href="{{ url_for('goodies') }}">Goodies</a>
+                  <a class="nav-link {% block nav_goodies %}{% endblock %} fs-2" href="{{ url_for('goodies') }}">Goodies</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-2" href="{{ url_for('history') }}">History</a>
+                  <a class="nav-link {% block nav_history %}{% endblock %} fs-2" href="{{ url_for('history') }}">History</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-2" href="{{ url_for('oneteehundred') }}">1T00</a>
+                  <a class="nav-link {% block nav_thanks %}{% endblock %} fs-2" href="{{ url_for('thanks') }}">Thanks</a>
                 </li>
             </div>
           </div>
         </nav>
+        {% endif %}
 
-        <section class="main pt-4">
-            {% block content %}
-            {% endblock %}
+        <section>
+
+            <div class="main">
+                {% block content %}
+                {% endblock %}
+            </div>
         </section>
     </body>
 </html>

@@ -15,13 +15,27 @@ body {
 
 .navbar {
     box-shadow: 0 -8px 12px 2px #111;
-    z-index: 1000; 
+    transition: all 0.3s ease;
+} 
+
+.scrolled-top {
+    opacity: 0;
 }
 
 .main {
     width: 100%;
-    height: 100vh;
     overflow-x: hidden;
+}
+
+.jumbotron h1 {
+    font-size: 48px;
+}
+
+.jumbotron-image {
+    height:150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Curtain background */
@@ -30,7 +44,7 @@ body {
     height: 100%;
 }
 
-.curtain {
+.curtain-panel {
     background-image: url('../../static/img/curtain.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,16 +52,19 @@ body {
     height: 100vh;
     float: left;
     position: relative;
-    transition: transform 1s ease-out;
+    z-index: 2;
+    transition: transform 1.4s ease;
 }
 
 input[type=checkbox] {
     position: absolute;
     cursor: pointer;
     width: 100%;
-    height: 100%;
+    height: 80%;
     z-index: 100;
     opacity: 0;
+    top: 0;
+    left: 0;
 }
 
 input[type=checkbox]:checked ~ div.curtain-left {
@@ -64,6 +81,22 @@ input[type=checkbox]:checked ~ div.curtain-right {
 
 .curtain-right {
     transform: translateX(105%);
+}
+
+.video-wrapper {
+    padding: 5vh 5vw 5vh 5vw;
+    position: fixed;
+    z-index: 1;
+    width: 90vw;
+    height: 90vh;
+}
+
+.video-wrapper iframe {
+    width: 100vw;
+    max-height: 80vh;
+}
+
+.scroll-active {
 }
 
 /* Intro page */
@@ -101,16 +134,8 @@ input[type=checkbox]:checked ~ div.curtain-right {
     animation-delay: 5s;
 }
 
-/* Video */
-.video-wrapper {
-    z-index: 250;
-}
 
 /* People Page */
-.card {
-    border: none;
-}
-
 .people-group {
 }
 
@@ -124,10 +149,21 @@ input[type=checkbox]:checked ~ div.curtain-right {
 }
 
 .flip-card {
+    border: none;
     perspective: 1000px;
     background-color: transparent;
     width: 450px;
     height: 300px;
+    opacity: 0;
+    transform: translateY(4em) rotateZ(-2deg);
+    transition: transform 4s .25s cubic-bezier(0, 1, 0.3, 1),
+                opacity .3s .3s ease;
+
+}
+
+.flip-card.is-visible {
+    opacity: 1;
+    transform: rotateZ(-2deg);
 }
 
 .flip-inner {
@@ -152,6 +188,22 @@ input[type=checkbox]:checked ~ div.curtain-right {
 
 .flip-back {
     transform: rotateY(180deg);
+}
+
+/* GOODIES PAGE */
+.script {
+    font-family: 'Courier', 'monospace';
+    transform: rotateZ(1.5deg) translateY(1rem);
+}
+.script-action {
+    font-style: italic;
+    text-align: left;
+}
+.script-char {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.script-dial {
 }
 
 /* Helpers for positioning */

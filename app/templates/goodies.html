@@ -1,95 +1,106 @@
 {% extends "base.html" %}
+{% block nav_goodies %}active{% endblock %}
 
 {% block content %}
     <section class='hero'></section>
 
     <section class='container'>
+       
+        <!-- SKETCHES -->
+        <section id="sketches" class='container mb-4'>
+            <h1 class='h1 text-center sub-font'> SKETCHES </h1>
+            <hr class='people-hr border-dark mb-4' />
 
-      <h1 class='h1 text-center sub-font'> CAST </h2>
-      <hr class='people-hr border-dark mb-4' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='cast'>
-          {% for person in cast %}
-            <div class='col'>
-              <div class='mx-auto card flip-card text-dark mb-4 g-0'>
-                <div class='flip-inner'>
-                  <div class='card-img flip-front bg-light'>
-                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
-                  </div>
-                  <div class='card-body flip-back bg-light handwritten'>
-                    <h5 class='card-title'> {{person['name']}}</h5>
-                    <p class='card-text'>bio: {{person['bio']}}</p>
-                  </div>
+            <div class='row mb-4'>
+            <div class='card text-center g-0'>
+                <!-- nav -->
+                <div class='script card-header'>
+                    <div class='btn-group w-100' role='group' aria-label='Sketch navigation'>
+                        <a role='button' class='btn btn-outline-dark w-10' href='#' aria-label='Previous sketch'>
+                            <span aria-hidden='true'>&laquo;</span>
+                        </a>
+                        <div class='btn-group w-80' role='group'>
+                            <button id='sketch1' type='button' class='btn btn-outline-dark dropdown-toggle' data-bs-toggle="dropdown" aria-expanded='false' aria-label='Pick a sketch'>
+                                Sketch Title
+                            </button>
+                            <ul class='dropdown-menu w-100' aria-labelledby='sketch1'>
+                                <li><a class='dropdown-item' href="#">Sketch Title 1</a></li>
+                                <li><a class='dropdown-item' href="#">Sketch Title 2</a></li>
+                            </ul>
+                        </div>
+                        <a role='button' class='btn btn-outline-dark w-10' href='#' aria-label='Next sketch'>
+                            <span aria-hidden='true'>&raquo;</span>
+                        </a>
+
+                    </div>
                 </div>
-              </div>
+                
+                <!-- The Sketch Itself -->
+                <div class='card-body'>
+                    <h4 class='card-title'> SKETCH TITLE </h4>
+                    <p class='script-char'> ALICE </p>
+                    <p class='script-dial'> Hey, Bob! </p>
+                    <p class='script-char'> BOB </p>
+                    <p class='script-dial'> Alice, what the fuck are you doing here!? </p>
+                </div>
+
+                <!-- Footer (writer's credit) -->
+                <div class='card-footer text-muted'>
+                    by Anya Banning
+                </div>
             </div>
-          {% endfor %}
-      </section>
+            </div>
+
+        <!-- LYRICS -->
+        <section id="lyrics" class='container mb-4'>
+            <h1 class='h1 text-center sub-font'> LYRICS </h1>
+            <hr class='people-hr border-dark mb-4' />
+
+            <div class='row'>
+            <div class='card text-center g-0'>
+                <!-- nav -->
+                <div class='card-header script'>
+                    <div class='btn-group w-100' role='group' aria-label='Song lyric navigation'>
+                        <a role='button' class='btn btn-outline-dark w-10' href='#' aria-label='Previous ssong'>
+                            <span aria-hidden='true'>&laquo;</span>
+                        </a>
+                        <div class='btn-group w-80' role='group'>
+                            <button id='song1' type='button' class='btn btn-outline-dark dropdown-toggle' data-bs-toggle="dropdown" aria-expanded='false' aria-label='Pick a song'>
+                                Song Title
+                            </button>
+                            <ul class='dropdown-menu w-100' aria-labelledby='song1'>
+                                <li><a class='dropdown-item' href="#">Song Title 1</a></li>
+                                <li><a class='dropdown-item' href="#">Song Title 2</a></li>
+                            </ul>
+                        </div>
+                        <a role='button' class='btn btn-outline-dark w-10' href='#' aria-label='Next sketch'>
+                            <span aria-hidden='true'>&raquo;</span>
+                        </a>
+
+                    </div>
+                </div>
+                
+                <!-- The Lyrics Themselves -->
+                <div class='card-body'>
+                    <h4 class='card-title'> SONG TITLE </h4>
+                    <h6 class='h6'> based on Oh, Canada! from Patriotism </h6>
+                    <p class='lyrics-char'> JUSTIN </p>
+                    <p class='lyrics-dial'> In all of us command! </p>
+                    <p class='lyrics-char'> ERIN (simultaneously) </p>
+                    <p class='lyrics-dial'> In all thy sons command! </p>
+                </div>
+
+                <!-- Footer (writer's credit) -->
+                <div class='card-footer text-muted'>
+                    lyrics written by Justin Trudeau, music arranged by Erin O'Toole
+                </div>
+            </div>
+            </div>
+
+
+            <!-- OTHER THINGS?? -->
 
         
-      <h1 class='h1 text-center sub-font'> CREW </h2>
-      <hr class='people-hr border-dark mb-4' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='crew'>
-          {% for person in crew %}
-            <div class='col'>
-              <div class='mx-auto card flip-card text-dark mb-4 g-0'>
-                <div class='flip-inner'>
-                  <div class='card-img flip-front bg-light'>
-                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
-                  </div>
-                  <div class='card-body flip-back bg-light handwritten'>
-                    <h5 class='card-title'> {{person['name']}}</h5>
-                    <p class='card-text'>bio: {{person['bio']}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-      </section>
-
-      <h1 class='h1 text-center sub-font'> BAND </h2>
-      <hr class='people-hr border-dark mb-4' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='band'>
-          {% for person in band %}
-            <div class='col'>
-              <div class=' card flip-card text-dark g-0'>
-                <div class='flip-inner'>
-                  <div class='card-img flip-front bg-light'>
-                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
-                  </div>
-                  <div class='card-body flip-back bg-light handwritten'>
-                    <h5 class='card-title'> {{person['name']}}</h5>
-                    <p class='card-text'>bio: {{person['bio']}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>          
-          {% endfor %}
-      </section>
-
-      <h1 class='h1 text-center sub-font'> CREATIVE </h2>
-      <hr class='people-hr border-dark mb-4' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4' id='creative'>
-          {% for person in creative %}
-            <div class='col'>
-              <div class=' card flip-card text-dark g-0'>
-                <div class='flip-inner'>
-                  <div class='card-img flip-front bg-light'>
-                    <img src='https://www.placebear.com/300/200' class='card-img-top' alt='Photo of {{person['name']}}'>
-                  </div>
-                  <div class='card-body flip-back bg-light handwritten'>
-                    <h5 class='card-title'> {{person['name']}}</h5>
-                    <p class='card-text'>bio: {{person['bio']}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>          
-          {% endfor %}
-      </section>
+        </section> 
     </section>
-
-
-
-
-
-
 {% endblock %}

@@ -1,23 +1,20 @@
 {% extends "base.html" %}
+{% set hero = "inactive" %}
+{% block nav_watch %}active{% endblock %}
+{% block curtain_scroll %}<script src='{{ url_for('static', filename='js/curtains.js') }}' type='text/javascript'></script>{% endblock %}
 
 {% block content %}
-    <div class='container-fluid curtain-wrapper'>
-        <input type='checkbox' checked>
+    <div class='container-fluid curtain-wrapper px-0'>
+        <input type='checkbox' checked></input>
 
-        <div class='curtain curtain-left'></div>
+        <div class='curtain-panel curtain-left'></div>
+        
+        <div id='vw' class='video-wrapper d-flex justify-content-center align-items-stretch'>
+            <iframe style='' src="https://www.youtube.com/embed/NUYvbT6vTPs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-        <div class='curtain curtain-right'></div>
+        <div class='curtain-panel curtain-right'></div>
 
     </div>
     
-    <div class='video-wrapper position-relative'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/NUYvbT6vTPs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <!-- Spotlights -->
-
-    <div class='spotlight-wrapper'>
-        <div class='spotlight spotlight-left'></div>
-        <div class='spotlight spotlight-right reversed'></div>
-    </div>
 {% endblock %}
