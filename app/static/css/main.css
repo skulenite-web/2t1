@@ -193,7 +193,6 @@ input[type=checkbox]:checked ~ div.curtain-right {
 /* GOODIES PAGE */
 .script {
     font-family: 'Courier', 'monospace';
-    transform: rotateZ(1.5deg) translateY(1rem);
 }
 .script-action {
     font-style: italic;
