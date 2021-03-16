@@ -3,6 +3,6 @@
 *.pyc
 __pycache__/
 
-app/db.py
+app/dblocal.py
 
 *.bkp
