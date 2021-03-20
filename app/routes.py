@@ -9,9 +9,16 @@ from app import db
 ##   - db.sketches      ##
 ##########################
 
-# Helpers
+# Security
+@app.before_request
+def before_request():
+    if request.url.startswith('http://'):
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        return redirect(url, code=code)
+
 def headersify(response):
-    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubdomains;'
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubdomains'
     response.cache_control.max_age = 172800
     return response
 
