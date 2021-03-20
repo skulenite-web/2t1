@@ -9,10 +9,21 @@ from app import db
 ##   - db.sketches      ##
 ##########################
 
+# Helpers
+def headersify(response):
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubdomains;'
+    response.cache_control.max_age = 172800
+    return response
+
+#############
+### PAGES ###
+#############
+
 # Landing - Intro & Main Page
 @app.route('/')
 def comingsoon():
-    return render_template('comingsoon.html')
+    resp = make_response(render_template('comingsoon.html'))
+    return headersify(resp)
 
 @app.route('/shallnotpass/index')
 @app.route('/shallnotpass/home')
@@ -20,24 +31,26 @@ def home():
     visited = request.cookies.get('visited')
     if (visited == 'true'):
         # Have visited - skip animation
-        return render_template('watch.html')
+        resp = make_response(render_template('watch.html'))
+        return headersify(resp)
     else:
         # New visitor - play animation
         resp = make_response(render_template('intro_animation.html'))
         resp.set_cookie('visited', 'true')
-        return resp
+        return headersify(resp)
 
 ## Subpage - force animation
 @app.route('/shallnotpass/intro')
 def intro():
-    return render_template('intro_animation.html')
+    resp = make_response(render_template('intro_animation.html'))
+    return headersify(resp)
 
 ## Subpage: - Direct to watch
 @app.route('/shallnotpass/watch')
 def watch():
     resp = make_response(redirect(url_for('home', _anchor='video')))
     resp.set_cookie('visited', 'true')
-    return resp
+    return headersify(resp)
 
 # Team 
 @app.route('/shallnotpass/team')
@@ -57,7 +70,8 @@ def team():
             band.append(person)
         elif (person['role'] == 'creative'):
             creative.append(person)
-    return render_template('team.html', cast=cast, crew=crew, band=band, creative=creative)
+    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative))
+    return headersify(resp)
 
 @app.route('/shallnotpass/cast')
 def cast():
@@ -82,7 +96,8 @@ def history():
 def goodies():
     sketch = [{'character':'Alice', 'line':'Hey Bob!'}, {'character':'Bob', 'line':'Alice, what the fuck are you doing here!?'}]
     
-    return render_template('goodies.html', sketch=sketch)
+    resp = make_response(render_template('goodies.html', sketch=sketch))
+    return headersify(resp)
 
 @app.route('/shallnotpass/sketches')
 def sketches():
