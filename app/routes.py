@@ -67,16 +67,19 @@ def team():
     crew = []
     band = []
     creative = []
+    executive = []
 
     for person in db.people.find(sort=[('name', pymongo.ASCENDING)]):
-        if (person['role'] == 'cast'):
+        if (person['role'].lower() == 'cast'):
             cast.append(person)
-        elif (person['role'] == 'crew'):
+        elif (person['role'].lower() == 'crew'):
             crew.append(person)
-        elif (person['role'] == 'band'):
+        elif (person['role'].lower() == 'band'):
             band.append(person)
-        elif (person['role'] == 'creative'):
+        elif (person['role'].lower() == 'creative'):
             creative.append(person)
+        elif (person['role'].lower() == 'executive'):
+            executive.append(person)
     resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative))
     return headersify(resp)
 

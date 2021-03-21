@@ -1,5 +1,6 @@
 {% set hero = hero|default("active") %}
 {% set nav = nav|default("active") %}
+{% set nomargin = nomargin|default("false") %}
 
 <html>
     <head>
@@ -32,7 +33,7 @@
         {% endif %}
 
         {% if nav == "active" %}
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow mb-4" id="navbar">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow {% if nomargin == 'false' %}mb-4 {% endif %}" id="navbar">
           <div class="container-fluid">
             <a class="navbar-brand" id="nav-logo" href="#">
                 <img src='{{ url_for('static', filename='img/logo_nav.png') }}' width=80px>

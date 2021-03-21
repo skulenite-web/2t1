@@ -1,8 +1,9 @@
+import os
 from flask import Flask
 from flask_pymongo import pymongo
 from app import app
 
-CONNECTION_STRING = "lolfail"
+CONNECTION_STRING = os.environ['CONNECTION_STRING']
 
 # Connect
 client = pymongo.MongoClient(CONNECTION_STRING)
