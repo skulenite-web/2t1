@@ -71,16 +71,21 @@ def team():
 
     for person in db.people.find(sort=[('name', pymongo.ASCENDING)]):
         if (person['role'].lower() == 'cast'):
+            person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             cast.append(person)
         elif (person['role'].lower() == 'crew'):
+            person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             crew.append(person)
         elif (person['role'].lower() == 'band'):
+            person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             band.append(person)
         elif (person['role'].lower() == 'creative'):
+            person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             creative.append(person)
         elif (person['role'].lower() == 'executive'):
+            person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             executive.append(person)
-    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative))
+    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative, executive=executive))
     return headersify(resp)
 
 @app.route('/shallnotpass/cast')
