@@ -15,8 +15,21 @@ body {
 
 .navbar {
     box-shadow: 0 -8px 12px 2px #111;
-    transition: all 0.3s ease;
+    /*transition: all 0.3s ease;*/
 } 
+
+#navlogo_img {
+    opacity: 0;
+    width: 0px;
+}
+#navlogo_text {
+    opacity: 1;
+}
+
+#navlogo_text, #navlogo_img {
+    position: relative;
+    transition: all 0.8s ease;
+}
 
 .scrolled-top {
     opacity: 0;
@@ -153,13 +166,12 @@ input[type=checkbox]:checked ~ div.curtain-right {
     perspective: 1000px;
     background-color: transparent;
     background-size: fill;
-    overflow: hidden;
     width: 384px;
     height: 512px;
     opacity: 0;
-    transform: translateY(4em) rotateZ(-2deg);
+    transform: translateY(4em) rotateZ(-4deg);
     transition: transform 4s .25s cubic-bezier(0, 1, 0.3, 1),
-                opacity .3s .3s ease;
+                opacity .3s .24s ease;
 
 }
 
@@ -220,6 +232,11 @@ input[type=checkbox]:checked ~ div.curtain-right {
     src: url('../../static/fonts/gellardo.otf');
 }
 
+@font-face {
+    font-family: "Jaspers";
+    src: url('../../static/fonts/Jaspers.ttf');
+}
+
 .logo-font {
     font-family: "Allentown", "Helvetica";
 }
@@ -234,5 +251,5 @@ input[type=checkbox]:checked ~ div.curtain-right {
 }
 
 .handwritten {
-    font-family: "Gellardo", "Times New Roman";
+    font-family: "Jaspers", "Times New Roman";
 }
