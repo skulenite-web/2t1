@@ -67,9 +67,9 @@ def team():
     crew = []
     band = []
     creative = []
-    executive = []
-
-    for person in db.people.find(sort=[('name', pymongo.ASCENDING)]):
+    marketing = []
+    
+    for person in db.people.find(sort=[('order', pymongo.ASCENDING)]):
         if (person['role'].lower() == 'cast'):
             person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             cast.append(person)
@@ -82,21 +82,25 @@ def team():
         elif (person['role'].lower() == 'creative'):
             person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             creative.append(person)
-        elif (person['role'].lower() == 'executive'):
+        elif (person['role'].lower() == 'marketing'):
             person['img'] = '_'.join(person['name'].strip().lower().split(' '))
-            executive.append(person)
-    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative, executive=executive))
+            marketing.append(person)
+
+    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative, marketing=marketing))
     return headersify(resp)
 
 @app.route('/shallnotpass/cast')
 def cast():
     return redirect(url_for('team', _anchor='cast'))
-@app.route('/shallnotpass/crew')
-def crew():
-    return redirect(url_for('team', _anchor='crew'))
 @app.route('/shallnotpass/band')
 def band():
     return redirect(url_for('team', _anchor='band'))
+@app.route('/shallnotpass/crew')
+def crew():
+    return redirect(url_for('team', _anchor='crew'))
+@app.route('/shallnotpass/marketing')
+def marketing():
+    return redirect(url_for('team', _anchor='marketing'))
 @app.route('/shallnotpass/creative')
 def creative():
     return redirect(url_for('team', _anchor='creative'))

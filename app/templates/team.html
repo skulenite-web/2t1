@@ -5,29 +5,9 @@
 {% block content %}
     <section class='container' style='overflow:hidden'>
 
-      <h1 class='h1 mt-2 text-center sub-font'> EXECUTIVES </h1>
+      <h1 class='h1 mt-2 text-center sub-font' id='cast'> CAST </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center' id='exec'>
-          {% for person in executive %}
-            <div class='col'>
-              <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
-                <div class='flip-inner shadow'>
-                  <div class='card-img flip-front bg-light'>
-                    <img src="{{url_for('static', filename='img/team/')}}{{person['img']}}.JPG" class='card-img-top' alt='Photo of {{person['name']}}'>
-                  </div>
-                  <div class='card-body flip-back bg-light handwritten'>
-                    <h5 class='card-title text-center fs-1'>{{person['name']}}</h5>
-                    <p class='card-text text-center fs-3'>{{person['title']}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-      </section>
-
-      <h1 class='h1 mt-2 text-center sub-font'> CAST </h1>
-      <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center' id='cast'>
+      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
           {% for person in cast %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -35,7 +15,7 @@
                   <div class='card-img flip-front bg-light'>
                     <img src="{{url_for('static', filename='img/team/')}}{{person['img']}}.JPG" class='card-img-top' alt='Photo of {{person['name']}}'>
                   </div>
-                  <div class='card-body flip-back bg-light handwritten'>
+                  <div class='card-body flip-back bg-light d-flex flex-column justify-content-center handwritten'>
                     <h3 class='card-title text-center fs-1'>{{person['name']}}</h5>
                     <h5 class='card-title text-center fs-3'>{{person['discipline']}} {{person['year']}}</h5>
                     <p class='card-text fs-4' style="font-weight: 300;">{{person['blurb']}}</p>
@@ -46,10 +26,29 @@
           {% endfor %}
       </section>
 
-        
-      <h1 class='h1 mt-2 text-center sub-font'> CREW </h1>
+      <h1 class='h1 mt-2 text-center sub-font' id='band'> BAND </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center' id='crew'>
+      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
+          {% for person in band %}
+            <div class='col'>
+              <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
+                <div class='flip-inner shadow'>
+                  <div class='card-img flip-front bg-light'>
+                    <img src="{{url_for('static', filename='img/team/')}}{{person['img']}}.JPG" class='card-img-top' alt='Photo of {{person['name']}}'>
+                  </div>
+                  <div class='card-body flip-back bg-light d-flex flex-column justify-content-center  handwritten'>
+                    <h5 class='card-title text-center fs-1'>{{person['name']}}</h5>
+                    <p class='card-text text-center fs-3'>{{person['title']}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          {% endfor %}
+      </section>
+        
+      <h1 class='h1 mt-2 text-center sub-font' id='crew'> CREW </h1>
+      <hr class='people-hr border-dark mb-5' />
+      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
           {% for person in crew %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -57,7 +56,7 @@
                   <div class='card-img flip-front bg-light'>
                     <img src="{{url_for('static', filename='img/team/')}}{{person['img']}}.JPG" class='card-img-top' alt='Photo of {{person['name']}}'>
                   </div>
-                  <div class='card-body flip-back bg-light handwritten'>
+                  <div class='card-body flip-back bg-light d-flex flex-column justify-content-center  handwritten'>
                     <h5 class='card-title text-center fs-1'>{{person['name']}}</h5>
                     <p class='card-text text-center fs-3'>{{person['title']}}</p>
                   </div>
@@ -67,29 +66,30 @@
           {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font'> BAND </h1>
+      <h1 class='h1 mt-2 text-center sub-font' id='marketing'> MARKETING </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center' id='band'>
-          {% for person in band %}
+      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center'>
+          {% for person in marketing %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
                 <div class='flip-inner shadow'>
                   <div class='card-img flip-front bg-light'>
                     <img src="{{url_for('static', filename='img/team/')}}{{person['img']}}.JPG" class='card-img-top' alt='Photo of {{person['name']}}'>
                   </div>
-                  <div class='card-body flip-back bg-light handwritten'>
+                  <div class='card-body flip-back bg-light d-flex flex-column justify-content-center  handwritten'>
                     <h5 class='card-title text-center fs-1'>{{person['name']}}</h5>
                     <p class='card-text text-center fs-3'>{{person['title']}}</p>
                   </div>
                 </div>
               </div>
-            </div>          
+            </div>
           {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font'> CREATIVE </h1>
+
+      <h1 class='h1 mt-2 text-center sub-font' id='creative'> CREATIVE </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center' id='creative'>
+      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center'>
           {% for person in creative %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -97,7 +97,7 @@
                   <div class='card-img flip-front bg-light'>
                     <img src="{{url_for('static', filename='img/team/')}}{{person['img']}}.JPG" class='card-img-top' alt='Photo of {{person['name']}}'>
                   </div>
-                  <div class='card-body flip-back bg-light handwritten'>
+                  <div class='card-body flip-back bg-light d-flex flex-column justify-content-center  handwritten'>
                     <h5 class='card-title text-center fs-1'>{{person['name']}}</h5>
                     <p class='card-text text-center fs-3'>{{person['title']}}</p>
                   </div>
