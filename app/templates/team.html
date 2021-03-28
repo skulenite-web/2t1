@@ -4,6 +4,9 @@
 
 {% block content %}
     <section class='container' style='overflow:hidden'>
+    <!-- Outer row will contain sidenav and the nav thing' -->
+    <div class='row'>
+      <div class='col-12 col-lg-10 col-xxl-11'>
 
       <h1 class='h1 mt-2 text-center sub-font' id='cast'> CAST </h1>
       <hr class='people-hr border-dark mb-5' />
@@ -68,7 +71,7 @@
 
       <h1 class='h1 mt-2 text-center sub-font' id='marketing'> MARKETING </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
           {% for person in marketing %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -89,7 +92,7 @@
 
       <h1 class='h1 mt-2 text-center sub-font' id='creative'> CREATIVE </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
           {% for person in creative %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -106,6 +109,19 @@
             </div>          
           {% endfor %}
       </section>
+      </div>
+
+      <div class='col-lg-2 col-xxl-1 d-none d-lg-flex'>
+        <nav class='nav flex-column overflow-visible'>
+          <a class='nav-link' href='{{ url_for('cast') }}'>Cast</a>
+          <a class='nav-link' href='{{ url_for('band') }}'>Band</a>
+          <a class='nav-link' href='{{ url_for('crew') }}'>Crew</a>
+          <a class='nav-link' href='{{ url_for('marketing') }}'>Marketing</a>
+          <a class='nav-link' href='{{ url_for('creative') }}'>Creative</a>
+        </nav>
+      </div>
+
+    </div>
     </section>
 
 {% endblock %}
