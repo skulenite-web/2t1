@@ -14,6 +14,7 @@
         <!-- Custom JS -->
         {% block curtain_scroll %}{% endblock %}
         {% block team_js %}{% endblock %}
+        <script src='{{ url_for('static', filename='js/nav-scroll.js') }}'></script>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" sizes="96x96" href='{{ url_for('static', filename='img/favicon-96x96.png') }}'>
@@ -32,10 +33,10 @@
         {% endif %}
 
         {% if nav == "active" %}
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow {% if nomargin == 'false' %}mb-4 {% endif %}" id="navbar">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow {% if nomargin == 'false' %} fixed-top mb-4 {% endif %}" id="navbar">
           <div class="container-fluid">
-            <a class="navbar-brand" id="nav-logo" href="#">
-                <img src='{{ url_for('static', filename='img/logo_nav.png') }}' width=80px>
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img id="navlogo_img" src='{{ url_for('static', filename='img/logo_nav.png') }}'>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-controls="navToggle" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
