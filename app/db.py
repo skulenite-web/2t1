@@ -12,3 +12,5 @@ db = client['2t1db']
 # Set up collections
 people = db.people
 sketches = db.sketches
+lyrics = db.lyrics
+history = db.history

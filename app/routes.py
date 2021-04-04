@@ -107,8 +107,13 @@ def creative():
 
 # History
 @app.route('/shallnotpass/history')
+@app.route('/shallnotpass/timeline')
 def history():
-    return """history"""
+    events = []
+    for event in db.history.find(sort=[('order', pymongo.ASCENDING)]):
+        events.append(event)
+    resp = make_response(render_template('timeline.html', events=events))
+    return headersify(resp)
 
 # Goodies
 @app.route('/shallnotpass/goodies')
@@ -128,12 +133,7 @@ def lyrics():
 def promo():
     return redirect(url_for('goodies', _anchor='promo'))
 
-# Behind the scenes
-@app.route('/shallnotpass/bts')
-@app.route('/shallnotpass/BTS')
-@app.route('/shallnotpass/behindthescenes')
-def bts():
-    return """behind the scenes content here"""
+
 
 # Donor Thanks
 @app.route('/shallnotpass/thanks')

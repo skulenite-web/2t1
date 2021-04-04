@@ -22,9 +22,11 @@ body {
     opacity: 0;
     width: 0px;
 }
-#navlogo_text {
+#navlogo_img_watchpage {
     opacity: 1;
+    width: 80px;
 }
+
 
 #navlogo_text, #navlogo_img {
     position: relative;
@@ -166,8 +168,8 @@ input[type=checkbox]:checked ~ div.curtain-right {
     perspective: 1000px;
     background-color: transparent;
     background-size: fill;
-    width: 384px;
-    height: 512px;
+    width: 288px;
+    height: 384px;
     opacity: 0;
     transform: translateY(4em) rotateZ(-4deg);
     transition: transform 4s .25s cubic-bezier(0, 1, 0.3, 1),
@@ -217,6 +219,75 @@ input[type=checkbox]:checked ~ div.curtain-right {
     margin-bottom: 0;
 }
 .script-dial {
+}
+
+/* TIMELINE PAGE */
+.timeline-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.timeline-item p {
+    width: 50%;
+}
+
+.event-desc {
+    position: absolute;
+    transform: translateY(75px);
+    z-index: 100;
+}
+    
+.timeline-wrapper > .timeline-item:nth-child(even) {
+    justify-content: right;
+    padding-left: 200px;
+}
+
+.timeline-wrapper > .timeline-item:not(:nth-child(even)) {
+    justify-content: left;
+    padding-left: calc(50% - 225px);
+}
+
+.timeline-item::before {
+    content:"";
+    width: 5px;
+    background-color: #3c3c3c;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+}
+
+.timeline-item::after {
+  /*  font-family: 'Oxygen';
+    content:"T";
+    font-size: 40px;
+    color: #3c3c3c;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    left: 50%;
+    background: #f3e0d9;
+    z-index: 999;
+    margin-left: -25px;
+    border-radius: 50%;*/
+    content:"";
+    width: 50px;
+    height:5px;
+    position: absolute;
+    line-height: 50px;
+    background-color: #3c3c3c;
+    right: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+    transform: translateX(100%);
 }
 
 /* Helpers for positioning */
