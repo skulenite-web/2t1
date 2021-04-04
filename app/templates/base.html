@@ -36,7 +36,7 @@
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow {% if nomargin == 'false' %} fixed-top mb-4 {% endif %}" id="navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('home') }}">
-                <img id="navlogo_img" src='{{ url_for('static', filename='img/logo_nav.png') }}'>
+                <img id="navlogo_img{% if nomargin != 'false' %}_watchpage{% endif %}" src='{{ url_for('static', filename='img/logo_nav.png') }}'>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-controls="navToggle" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
