@@ -10,7 +10,7 @@
 
       <h1 class='h1 mt-2 text-center sub-font' id='cast'> CAST </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 justify-content-center'>
           {% for person in cast %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -20,8 +20,7 @@
                   </div>
                   <div class='card-body flip-back bg-light d-flex flex-column justify-content-center handwritten'>
                     <h3 class='card-title text-center fs-1'>{{person['name']}}</h5>
-                    <h5 class='card-title text-center fs-3'>{{person['discipline']}} {{person['year']}}</h5>
-                    <p class='card-text fs-4' style="font-weight: 300;">{{person['blurb']}}</p>
+                    <p class='card-text fs-6' style="font-weight: 300;">{{person['blurb']}}</p>
                   </div>
                 </div>
               </div>
@@ -31,7 +30,7 @@
 
       <h1 class='h1 mt-2 text-center sub-font' id='band'> BAND </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 justify-content-center'>
           {% for person in band %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -51,7 +50,7 @@
         
       <h1 class='h1 mt-2 text-center sub-font' id='crew'> CREW </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 justify-content-center'>
           {% for person in crew %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -71,7 +70,7 @@
 
       <h1 class='h1 mt-2 text-center sub-font' id='marketing'> MARKETING </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 justify-content-center'>
           {% for person in marketing %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
@@ -92,7 +91,7 @@
 
       <h1 class='h1 mt-2 text-center sub-font' id='creative'> CREATIVE </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='people-group row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4 justify-content-center'>
+      <section class='people-group row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 justify-content-center'>
           {% for person in creative %}
             <div class='col'>
               <div class='mx-auto card flip-card text-dark mb-4 g-0 show-on-scroll'>
