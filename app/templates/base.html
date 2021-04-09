@@ -1,6 +1,7 @@
 {% set hero = hero|default("active") %}
 {% set nav = nav|default("active") %}
 {% set nomargin = nomargin|default("false") %}
+{% set teampage = teampage|default("false") %}
 
 <html>
     <head>
@@ -58,6 +59,26 @@
                 <li class="nav-item">
                   <a class="nav-link {% block nav_thanks %}{% endblock %} fs-2" href="{{ url_for('thanks') }}">Thanks</a>
                 </li>
+              </ul>
+              {% if teampage == 'true' %}
+              <ul class='navbar-nav mb-2 mb-lg-0 sub-font d-none d-lg-flex'>
+                <li class='nav-item'>
+                  <a class='nav-link fs-3' href='#cast'>Cast</a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link fs-3' href='#band'>Band</a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link fs-3' href='#crew'>Crew</a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link fs-3' href='#marketing'>Marketing</a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link fs-3' href='#creative'>Creative</a>
+                </li>
+              </ul>
+              {% endif %}
             </div>
           </div>
         </nav>
@@ -70,5 +91,13 @@
                 {% endblock %}
             </div>
         </section>
+
+        <footer class='footer mt-4 py-3 bg-info'>
+            <div class='container'>
+                <span'>
+                    S O C I A L S
+                </span>
+            </div>
+        </footer>
     </body>
 </html>
