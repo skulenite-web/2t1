@@ -53,6 +53,12 @@ body {
     background-size: cover;
 }
 
+@media (min-width: 1200px) {
+    .jumbotron-image {
+        height: 200px;
+    }
+}
+
 /* Curtain background */
 .curtain-wrapper {   
     width: 100%;
@@ -238,11 +244,19 @@ input[type=checkbox]:checked ~ div.curtain-right {
 }
 
 .event-desc {
+    display: none;
     position: absolute;
+    opacity: 0;
     transform: translateY(75px);
     z-index: 100;
+   /* transition: opacity 0.8s ease;*/
 }
     
+.timeline-item-inner-wrapper:hover + .event-desc {
+    display: inline;
+    opacity: 1;
+}
+
 .timeline-wrapper > .timeline-item:nth-child(even) {
     justify-content: right;
     padding-left: 200px;
