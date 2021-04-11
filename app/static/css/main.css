@@ -212,9 +212,20 @@ input[type=checkbox]:checked ~ div.curtain-right {
     transform: rotateY(180deg);
 }
 
+.name-credit::after {
+    content: ' • ';
+}
+
+.name-credit:last-of-type::after {
+    content: '';
+}
+
 /* GOODIES PAGE */
 .script {
     font-family: 'Courier', 'monospace';
+}
+.script-title {
+    font-weight: bold;
 }
 .script-action {
     font-style: italic;
@@ -225,6 +236,10 @@ input[type=checkbox]:checked ~ div.curtain-right {
     margin-bottom: 0;
 }
 .script-dial {
+}
+.script-slug {
+    font-style: italic;
+    text-transform: uppercase;
 }
 
 /* TIMELINE PAGE */
