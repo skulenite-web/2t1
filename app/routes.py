@@ -68,7 +68,8 @@ def team():
     band = []
     creative = []
     marketing = []
-    
+    writers = []
+
     for person in db.people.find(sort=[('order', pymongo.ASCENDING)]):
         if (person['role'].lower() == 'cast'):
             person['img'] = '_'.join(person['name'].strip().lower().split(' '))
@@ -85,8 +86,10 @@ def team():
         elif (person['role'].lower() == 'marketing'):
             person['img'] = '_'.join(person['name'].strip().lower().split(' '))
             marketing.append(person)
+        elif (person['role'].lower() == 'writer'):
+            writers.append(person['name'])
 
-    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative, marketing=marketing))
+    resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative, marketing=marketing, writers=writers))
     return headersify(resp)
 
 @app.route('/shallnotpass/cast')
@@ -118,9 +121,13 @@ def history():
 # Goodies
 @app.route('/shallnotpass/goodies')
 def goodies():
-    sketch = [{'character':'Alice', 'line':'Hey Bob!'}, {'character':'Bob', 'line':'Alice, what the fuck are you doing here!?'}]
+
+    sketches = []
+    for sketch in db.sketches.find(sort=[('order', pymongo.ASCENDING)]):
+        sketch['title'] = sketch['title'].upper()
+        sketches.append(sketch)
     
-    resp = make_response(render_template('goodies.html', sketch=sketch))
+    resp = make_response(render_template('goodies.html', sketches=sketches))
     return headersify(resp)
 
 @app.route('/shallnotpass/sketches')
