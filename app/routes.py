@@ -126,8 +126,10 @@ def goodies():
     for sketch in db.sketches.find(sort=[('order', pymongo.ASCENDING)]):
         sketch['title'] = sketch['title'].upper()
         sketches.append(sketch)
+    songs = []
+    songs.append({'title':'song1'})
     
-    resp = make_response(render_template('goodies.html', sketches=sketches))
+    resp = make_response(render_template('goodies.html', sketches=sketches, songs=songs))
     return headersify(resp)
 
 @app.route('/shallnotpass/sketches')
@@ -143,11 +145,10 @@ def promo():
 
 
 # Donor Thanks
-@app.route('/shallnotpass/thanks')
-@app.route('/shallnotpass/1t00')
-@app.route('/shallnotpass/1T00')
-def thanks():
-    return """1t00 babyyyyy!!!"""
+@app.route('/shallnotpass/donors')
+def donors():
+    resp = make_response(render_template('donors.html'))
+    return headersify(resp)
 
 # Contact
 @app.route('/shallnotpass/contact')
