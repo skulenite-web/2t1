@@ -29,7 +29,8 @@
       <section class='text-center mt-5'>
           {% for person in cast %}
             {% if person['no-photo'] == 'true' %}
-            <span class='name-credit'>{{person['name']}}</span>
+            <span class='name-credit sub-font fs-3 mx-1'>{{person['name']}}, {{person['title']}}</span>
+            <span class='name-credit-separator sub-font fs-3 mx-1'> • </span>
             {% endif %}
           {% endfor %}
       </section>
@@ -58,7 +59,8 @@
       <section class='text-center mt-5'>
           {% for person in band %}
             {% if person['no-photo'] == 'true' %}
-            <span class='name-credit'>{{person['name']}}</span>
+            <span class='name-credit sub-font fs-3 mx-1'>{{person['name']}}, {{person['title']}}</span>
+            <span class='name-credit-separator sub-font fs-3 mx-1'> • </span>
             {% endif %}
           {% endfor %}
       </section>
@@ -87,7 +89,8 @@
       <section class='text-center mt-5'>
           {% for person in crew %}
             {% if person['no-photo'] == 'true' %}
-            <span class='name-credit'>{{person['name']}}</span>
+            <span class='name-credit sub-font fs-3 mx-1'>{{person['name']}}, {{person['title']}}</span>
+            <span class='name-credit-separator sub-font fs-3 mx-1'> • </span>
             {% endif %}
           {% endfor %}
       </section>
@@ -116,7 +119,8 @@
       <section class='text-center mt-5'>
           {% for person in marketing %}
             {% if person['no-photo'] == 'true' %}
-            <span class='name-credit'>{{person['name']}}</span>
+            <span class='name-credit sub-font fs-3 mx-1'>{{person['name']}}, {{person['title']}}</span>
+            <span class='name-credit-separator sub-font fs-3 mx-1'> • </span>
             {% endif %}
           {% endfor %}
       </section>
@@ -146,16 +150,18 @@
       <section class='text-center mt-5'>
           {% for person in creative %}
             {% if person['no-photo'] == 'true' %}
-            <span class='name-credit'>{{person['name']}}</span>
+            <span class='name-credit sub-font fs-3 mx-1'>{{person['name']}}, {{person['title']}}</span>
+            <span class='name-credit-separator sub-font fs-3 mx-1'> • </span>
             {% endif %}
           {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKETCH WRITERS </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> WRITERS </h1>
       <hr class='people-hr border-dark mb-5' />
       <section class='text-center'>
         {% for writer in writers %}
-            <span class='name-credit'>{{writer}}</span>
+            <span class='name-credit sub-font fs-4 mx-1'>{{writer}}</span>
+            <span class='name-credit-separator sub-font fs-4 mx-1'> • </span>
         {% endfor %}
       </section>
     </section>
