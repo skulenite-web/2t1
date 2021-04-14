@@ -210,14 +210,12 @@ input[type=checkbox]:checked ~ div.curtain-right {
 
 .flip-back {
     transform: rotateY(180deg);
+    background-color: transparent;
+    background-size: fill;
 }
 
-.name-credit::after {
-    content: ' • ';
-}
-
-.name-credit:last-of-type::after {
-    content: '';
+.name-credit-separator:last-of-type {
+    display: none;
 }
 
 /* GOODIES PAGE */
@@ -293,19 +291,6 @@ input[type=checkbox]:checked ~ div.curtain-right {
 }
 
 .timeline-item::after {
-  /*  font-family: 'Oxygen';
-    content:"T";
-    font-size: 40px;
-    color: #3c3c3c;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    left: 50%;
-    background: #f3e0d9;
-    z-index: 999;
-    margin-left: -25px;
-    border-radius: 50%;*/
     content:"";
     width: 50px;
     height:5px;
@@ -327,11 +312,6 @@ input[type=checkbox]:checked ~ div.curtain-right {
 }
 
 /* Fonts */
-@font-face {
-    font-family: "Gellardo";
-    src: url('../../static/fonts/gellardo.otf');
-}
-
 @font-face {
     font-family: "Jaspers";
     src: url('../../static/fonts/Jaspers.ttf');
