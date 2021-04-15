@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block nav_donors %}active{% endblock %}
 {% block team_js %}<script src="{{ url_for('static', filename='js/show-on-scroll.js') }}" type='text/javascript'></script>{% endblock %}
-{% set teampage = "true" %}
 
 {% block content %}
     <section class='container'>
 
-      <p class='text-center fs-3 my-3'>To celebrate a century of laughter, Skule Nite alumni have established a new student scholarship - making sure that students have the support they need to pursue both academics and extracurriculars. We're grateful to all of the donors who have made this scholarship possible for the future students of Skule Nite.</p>
+      <p class='text-center sub-font fs-3 my-3'>To celebrate a century of laughter, Skule Nite alumni have established a new student scholarship - making sure that students have the support they need to pursue both academics and extracurriculars. We're grateful to all of the donors who have made this scholarship possible for the future students of Skule Nite.</p>
   
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> PRODUCTION ROW </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> PRODUCTION ROW ($5,000+) </h1>
       <hr class='people-hr border-dark mb-5' />
       <section class='text-center'>
         {% for donor in produc %}
@@ -16,7 +15,7 @@
         {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE LEGEND </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE LEGEND ($1,921 - $4,999) </h1>
       <hr class='people-hr border-dark mb-5' />
       <section class='text-center'>
         {% for donor in legend %}
@@ -24,7 +23,7 @@
         {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE FOSSIL </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE FOSSIL ($1,000 - $1,921) </h1>
       <hr class='people-hr border-dark mb-5' />
       <section class='text-center'>
         {% for donor in fossil %}
@@ -32,7 +31,7 @@
         {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE FLUNKY </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE FLUNKY ($100 - $999) </h1>
       <hr class='people-hr border-dark mb-5' />
       <section class='text-center'>
         {% for donor in flunky %}
