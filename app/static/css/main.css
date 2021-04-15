@@ -58,43 +58,54 @@ body {
     }
 }
 
-/* Curtain background */ 
+/* Curtain background */
+/* CSS for abandoned version::
 .curtains {   
     width: 100vw;
-    height: 0;
     top: 80px;
-    z-index: 1;
+    z-index: 100;
 }
 
-.curtains-top {
-  /*  background-image: url('../../static/img/curtains-top.png');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    width: 100%;
-    height: 25%;*/
-    z-index: 201;
-
-}
-
-.curtains-top img {
+.curtain-top {
     z-index: 300;
 }
 
-.curtains-rusts {
-    background-image: url('../../static/img/curtains-rusts.png');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+.curtain-wrapper {
     width: 100%;
     height: 100%;
+}
+
+.curtain-panel {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    position: relative;
     z-index: 200;
+    transition: transform 1.4s ease;
+}
+
+.curtain-left {
+    background-image: url('../../static/img/curtain-left.png');
+}
+
+.curtain-right {
+    background-image: url('../../static/img/curtain-right.png');
+}
+*/
+
+.curtains {   
+    width: 100vw;
+    z-index: 300;
+    background-color: #111;
 }
 
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;
-    z-index: 200;
-    top: 5
+    z-index: 100;
 }
 
 .iframe-container iframe {
@@ -235,6 +246,7 @@ body {
 .script-slug {
     font-style: italic;
     text-transform: uppercase;
+    text-align: left;
 }
 
 /* TIMELINE PAGE */
@@ -249,24 +261,18 @@ body {
     margin-bottom: 100px;
 }
 
-.timeline-item p {
+
+/*.timeline-item p {
     width: 50%;
-}
+}*/
 
 .event-desc {
-    display: none;
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(75px);
     z-index: 100;
-   /* transition: opacity 0.8s ease;*/
 }
-    
-.timeline-item-inner-wrapper:hover + .event-desc {
-    display: inline;
-    opacity: 1;
-}
-
+   
 .timeline-wrapper > .timeline-item:nth-child(even) {
     justify-content: right;
     padding-left: 200px;
@@ -274,7 +280,7 @@ body {
 
 .timeline-wrapper > .timeline-item:not(:nth-child(even)) {
     justify-content: left;
-    padding-left: calc(50% - 225px);
+    padding-right: 200px;
 }
 
 .timeline-item::before {

@@ -6,10 +6,23 @@
     <section class='container'>   
         <div class='empty mb-5'>
         </div> 
-
-        <div class='timeline-wrapper'>
+    </section>
+    <section class='container'>
+        <div class='timeline-wrapper mt-5' style='transform:translateY(100px);'>
         {% for event in events %}
             <div class='timeline-item'>
+                <div class='card shadow script translate-middle-y mb-5' style='max-width: 50%;'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>{{event['date']}}</h5>
+                        <ul>
+                            {% for desc in event['description'] %}
+                            <li class='card-text'>{{desc}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--
                 <p class='timeline-item-inner-wrapper m-0 p-0'>
                     <button class='btn btn-primary btn-lg translate-middle-y' type='button'>
                         {{event['date']}}
@@ -22,7 +35,7 @@
                     {% endfor %}
                     </ul>
                 </div>
-            </div>
+            </div> !-->
         {% endfor %}
         </div>
     </section>
