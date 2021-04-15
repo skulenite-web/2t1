@@ -5,19 +5,53 @@
 {% block curtain_scroll %}<script src='{{ url_for('static', filename='js/curtains.js') }}' type='text/javascript'></script>{% endblock %}
 
 {% block content %}
-    <div class='container-fluid curtain-wrapper px-0'>
-        <input type='checkbox' checked></input>
+        <div class='curtains px-0 mx-0 position-aboslute overflow-visible'>
+            <!-- Curtains - banner -->
+            <div class='curtains-top position-fixed border-none'>
+                <img src="{{url_for('static', filename='img/curtains-top.png')}}" width=100%>
+            </div>
 
-        <div class='curtain-panel curtain-left'></div>
-        
-        <div id='vw' class='video-wrapper d-flex justify-content-center align-items-stretch'>
-            <iframe style='' src="https://www.youtube.com/embed/HMxzTXKrpQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/live_chat?&v=HMxzTXKrpQ8" frameborder='0'></iframe>
-            <a class='btn btn-primary' href='https://www.youtube.com/live_chat?&v=HMxzTXKrpQ8' target="_blank">CLICK HERE FOR CHAT</a>
+            <!-- Curtains - rusts (scroll-past) -->
+            <!--<div class='curtains-rusts position-absolute'></div>-->
         </div>
 
-        <div class='curtain-panel curtain-right'></div>
+        <div class='iframe-container'>
+            <iframe src="https://www.youtube.com/embed/HMxzTXKrpQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-    </div>
-    
+        <div class='container'>
+            <div class='row'>
+                <div class='d-inline-flex justify-content-center my-3'>
+                    <a class='btn btn-primary text-center' href='https://www.youtube.com/live_chat?&v=HMxzTXKrpQ8' target='_blank'>CLICK HERE TO CHAT WITH OTHER VIEWERS</a>
+                </div>
+            </div>
+            
+            <h1 class='h1 mt-2 text-center pt-3 fw-bold'>LEAVE A REVIEW!</h1>
+            <hr class='border-dark mb-3'>
+            <div class='row'>
+                <form action='{{url_for('home')}}' method='post'>
+                    {{form.csrf_token}}
+                    <div class='row g-1 mb-3'>
+                        <div class='form-floating col-sm-6 mb-3'>
+                            {{form.name(class_='form-control', placeholder='Knights Kool')}}
+                            {{form.name.label}}
+                        </div>
+                       <!-- <div class='form-floating col-auto mb-3'>
+                            {{form.email(class_='form-control', placeholder='name@skule.ca')}}
+                            {{form.email.label(class_='form-label')}}
+                        </div>-->
+                        <div class='form-floating col-sm-6 mb-3'>
+                            {{form.uoft(class_='form-control', placeholder='ECE2T1')}}
+                            {{form.uoft.label(class_='form-label')}}
+                        </div>
+                    </div>
+                    <div class='form-floating mb-3'>
+                        {{form.comment(class_='form-control', placeholder='Wow, another Skule Nite!', style='height: 200px;')}}
+                        {{form.comment.label(class_='form-label')}}
+                    </div>
+                    <button type='submit' class='btn btn-primary'>Submit</button>
+                </form>
+            </div>
+        </div>
+
 {% endblock %}

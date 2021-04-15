@@ -1,5 +1,7 @@
 from flask import render_template, request, make_response, redirect, url_for
 from flask_pymongo import pymongo
+from wtforms import Form, StringField, TextAreaField, validators
+import datetime
 from app import app
 from app import db
 
@@ -7,7 +9,20 @@ from app import db
 ## DB Collections:      ##
 ##   - db.people        ##
 ##   - db.sketches      ##
+##   - db.lyrics        ##
+##   - db.history       ##
+##   - db.comments      ##
 ##########################
+
+##########################
+####### FORM CLASS #######
+##########################
+
+class CommentForm(Form):
+    name = StringField('Name', [validators.DataRequired(), validators.Length(min=1, max=100)])
+    email = StringField('Email Address', [validators.DataRequired(), validators.Email()])
+    uoft = StringField('Grad Year (optional)', [validators.Length(min=3, max=15)])
+    comment = TextAreaField('Comment', [validators.DataRequired(), validators.Length(min=1, max=300)])
 
 # Security
 @app.before_request
@@ -33,31 +48,23 @@ def comingsoon():
     return headersify(resp)
 
 @app.route('/shallnotpass/index')
-@app.route('/shallnotpass/home')
-def home():
-    visited = request.cookies.get('visited')
-    if (visited == 'true'):
-        # Have visited - skip animation
-        resp = make_response(render_template('watch.html'))
-        return headersify(resp)
-    else:
-        # New visitor - play animation
-        resp = make_response(render_template('intro_animation.html'))
-        resp.set_cookie('visited', 'true')
-        return headersify(resp)
-
-## Subpage - force animation
-@app.route('/shallnotpass/intro')
-def intro():
-    resp = make_response(render_template('intro_animation.html'))
-    return headersify(resp)
-
-## Subpage: - Direct to watch
 @app.route('/shallnotpass/watch')
-def watch():
-    resp = make_response(redirect(url_for('home', _anchor='video')))
-    resp.set_cookie('visited', 'true')
+@app.route('/shallnotpass/home', methods=['GET', 'POST'])
+def home():
+    form = CommentForm(request.form)
+    if (request.method == 'POST' and form.validate()):
+        comment = {
+            'name'      :   form.name.data,
+            'email'     :   form.email.data,
+            'uoft'      :   form.uoft.data,
+            'comment'   :   form.comment.data
+        }
+        db.comments.insert_one(comment)
+        #flash('Thanks for submitting your comment!')
+        return redirect(url_for('home'))
+    resp = make_response(render_template('watch.html', form=form))
     return headersify(resp)
+
 
 # Team 
 @app.route('/shallnotpass/team')
@@ -108,6 +115,7 @@ def marketing():
 def creative():
     return redirect(url_for('team', _anchor='creative'))
 
+
 # History
 @app.route('/shallnotpass/history')
 @app.route('/shallnotpass/timeline')
@@ -118,6 +126,7 @@ def history():
     resp = make_response(render_template('timeline.html', events=events))
     return headersify(resp)
 
+
 # Goodies
 @app.route('/shallnotpass/goodies')
 def goodies():
@@ -125,6 +134,7 @@ def goodies():
     sketches = []
     for sketch in db.sketches.find(sort=[('order', pymongo.ASCENDING)]):
         sketch['title'] = sketch['title'].upper()
+        sketch['display_title'] = ' '.join(sketch['title'].split('_')).upper()
         sketches.append(sketch)
     songs = []
     songs.append({'title':'song1'})
@@ -143,19 +153,11 @@ def promo():
     return redirect(url_for('goodies', _anchor='promo'))
 
 
-
 # Donor Thanks
 @app.route('/shallnotpass/donors')
 def donors():
     resp = make_response(render_template('donors.html'))
     return headersify(resp)
-
-# Contact
-@app.route('/shallnotpass/contact')
-@app.route('/shallnotpass/social')
-@app.route('/shallnotpass/socials')
-def contact():
-    return """socials and contact info"""
 
 
 # Error Handling

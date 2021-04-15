@@ -14,3 +14,4 @@ people = db.people
 sketches = db.sketches
 lyrics = db.lyrics
 history = db.history
+comments = db.comments
