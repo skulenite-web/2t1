@@ -10,6 +10,10 @@ function checkName(name) {
     return name == document.getElementById('sketch-dropdown').innerHTML;
 }
 
+function checkSongName(name) {
+    return name == document.getElementById('sketch-dropdown').innerHTML;
+}
+
 function switchSketch(sketch, sketch_display) {
     if (sketch === 'next') {
         // Hide old sketch
@@ -92,6 +96,6 @@ function switchSong(song, song_display) {
         document.getElementById('song-dropdown').innerHTML = song_display;
 
         // Update index
-        song_index = songs_display.findIndex(checkName);
+        song_index = songs_display.findIndex(checkSongName);
     }
 }

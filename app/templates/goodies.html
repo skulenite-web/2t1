@@ -35,7 +35,6 @@
                 <div class='card-body'>
                     {% for sketch in sketches %}
                         <div class='sketch-script-text {% if sketch['title'] != sketches[0]['title'] %}d-none {% endif %}' id='{{sketch['title']}}'>
-                            <h4 class='card-title script-title'> {{sketch['display_title']}} </h4>
                             {% for line in sketch['script'] %}
                                 <p class='script-{{line['type']}}'> {{line['text']}} </p>
                             {% endfor %}
@@ -76,7 +75,6 @@
                 <div class='card-body'>
                     {% for song in songs %}
                         <div class='song-script-text text-center {% if song['title'] != songs[0]['title'] %}d-none {% endif %}' id='{{song['title']}}'>
-                            <h4 class='card-title script-title'> {{song['display_title']}} </h4>
                             {% for line in song['lines'] %}
                                 <p class='{mb-1'>{{line}}</p>
                             {% endfor %}
