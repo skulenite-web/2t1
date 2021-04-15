@@ -16,7 +16,7 @@
         {% block curtain_scroll %}{% endblock %}
         {% block team_js %}{% endblock %}
         {% block switch_js %}{% endblock %}
-        <script src='{{ url_for('static', filename='js/nav-scroll.js') }}'></script>
+        {% if hero == 'active' %}<script src='{{ url_for('static', filename='js/nav-scroll.js') }}'></script>{% endif %}
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" sizes="96x96" href='{{ url_for('static', filename='img/favicon-96x96.png') }}'>
@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navToggle">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 sub-font">
                 <li class="nav-item">
-                  <a class="nav-link {% block nav_watch %}{% endblock %} fs-2" aria-current="page" href="{{ url_for('watch') }}">Watch</a>
+                  <a class="nav-link {% block nav_watch %}{% endblock %} fs-2" aria-current="page" href="{{ url_for('home') }}">Watch</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link {% block nav_team %}{% endblock %} fs-2" href="{{ url_for('team') }}">Team</a>
@@ -80,6 +80,9 @@
                   <a class='nav-link fs-3' href='#creative'>Creative</a>
                 </li>
               </ul>
+              {% endif %}
+              {% if hero != 'active' %}
+              <a id='curtain-toggle' class='d-none d-md-block btn btn btn-danger float-end' onclick='toggleCurtains()'>Hide Curtains</a>
               {% endif %}
             </div>
           </div>

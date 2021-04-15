@@ -5,28 +5,52 @@
 {% block curtain_scroll %}<script src='{{ url_for('static', filename='js/curtains.js') }}' type='text/javascript'></script>{% endblock %}
 
 {% block content %}
-        <div class='curtains px-0 mx-0 position-aboslute overflow-visible'>
+        <div class='d-none d-md-block curtains px-0 mx-0 position-absolute overflow-visible' style='top:106px;'>
             <!-- Curtains - banner -->
-            <div class='curtains-top position-fixed border-none'>
-                <img src="{{url_for('static', filename='img/curtains-top.png')}}" width=100%>
+            <div class='curtain-top position-absolute border-none'>
+                <img id='curtain-img' src="{{url_for('static', filename='img/curtains-top.png')}}" width=100%></img>
             </div>
 
             <!-- Curtains - rusts (scroll-past) -->
             <!--<div class='curtains-rusts position-absolute'></div>-->
         </div>
 
-        <div class='iframe-container'>
+        <div id='video' class='iframe-container'>
             <iframe src="https://www.youtube.com/embed/HMxzTXKrpQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <div class='container'>
+        <div class='container mt-5'>
             <div class='row'>
-                <div class='d-inline-flex justify-content-center my-3'>
-                    <a class='btn btn-primary text-center' href='https://www.youtube.com/live_chat?&v=HMxzTXKrpQ8' target='_blank'>CLICK HERE TO CHAT WITH OTHER VIEWERS</a>
+                <div class='d-inline-flex justify-content-center my-3 mt-5'>
+                    <a class='btn btn-primary btn-lg text-center' href='https://www.youtube.com/live_chat?&v=HMxzTXKrpQ8' target='_blank'>CLICK HERE TO CHAT WITH OTHER VIEWERS</a>
                 </div>
             </div>
             
-            <h1 class='h1 mt-2 text-center pt-3 fw-bold'>LEAVE A REVIEW!</h1>
+            {% if comments|length != 0 %}
+            <h1 class='h1 mt-2 sub-font text-center pt-3 fw-bold'>
+                AUDIENCE REVIEWS!
+            </h1>
+            <hr class='border-dark mb-3'>
+            <div class='container g-3'>
+                {% if comments|length > 5 %}<a href='#leave-review' class='btn btn-sm btn-danger mb-3'>Leave your own!</a>{% endif %}
+                {% for comment in comments %}
+                    <div class='row'>
+                        <span class='float-start fs-4 fw-bold'>{{comment['name']}}{% if comment['uoft'] != '' %} ({{comment['uoft']}}){% endif %}</span>
+                        <span class='float-end fs-6 text-muted'>{{comment['date-readable']}}</span>
+                        <p class='fs-5'>{{comment['comment']}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h1 id='leave-review' class='h1 mt-2 sub-font text-center pt-3'>
+                LEAVE YOUR OWN!
+            </h1>
+            {% else %}
+            <h1 id='leave-review' class='h1 mt-2 sub-font text-center pt-3'>
+                LEAVE A REVIEW!
+            </h1>
+            {% endif %}
+
             <hr class='border-dark mb-3'>
             <div class='row'>
                 <form action='{{url_for('home')}}' method='post'>
@@ -36,10 +60,6 @@
                             {{form.name(class_='form-control', placeholder='Knights Kool')}}
                             {{form.name.label}}
                         </div>
-                       <!-- <div class='form-floating col-auto mb-3'>
-                            {{form.email(class_='form-control', placeholder='name@skule.ca')}}
-                            {{form.email.label(class_='form-label')}}
-                        </div>-->
                         <div class='form-floating col-sm-6 mb-3'>
                             {{form.uoft(class_='form-control', placeholder='ECE2T1')}}
                             {{form.uoft.label(class_='form-label')}}
