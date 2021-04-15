@@ -144,7 +144,10 @@ def goodies():
         sketch['display_title'] = ' '.join(sketch['title'].split('_')).upper()
         sketches.append(sketch)
     songs = []
-    songs.append({'title':'song1'})
+    for song in db.lyrics.find(sort=[('order', pymongo.ASCENDING)]):
+        song['display_title'] = song['title'].upper()
+        song['title'] = '_'.join(song['title'].split(' ')).upper().replace('(', '').replace(')', '').replace("'", '').replace('!', '').replace(',', '')
+        songs.append(song)
     
     resp = make_response(render_template('goodies.html', sketches=sketches, songs=songs))
     return headersify(resp)
@@ -163,7 +166,22 @@ def promo():
 # Donor Thanks
 @app.route('/shallnotpass/donors')
 def donors():
-    resp = make_response(render_template('donors.html'))
+    prodro = []
+    legend = []
+    fossil = []
+    flunky = []
+
+    for donor in db.donors.find(sort=[('name', pymongo.ASCENDING)]):
+        if (donor['type'] == 'prodro'):
+            prodro.append(donor['name'])
+        elif (donor['type'] == 'legend'):
+            legend.append(donor['name'])
+        elif (donor['type'] == 'fossil'):
+            fossil.append(donor['name'])
+        elif (donor['type'] == 'flunky'):
+            flunky.append(donor['name'])
+
+    resp = make_response(render_template('donors.html', prodro=prodro, legend=legend, fossil=fossil, flunky=flunky))
     return headersify(resp)
 
 
