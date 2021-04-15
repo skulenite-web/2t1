@@ -27,12 +27,14 @@ class CommentForm(Form):
 # Security
 @app.before_request
 def before_request():
+    return
     if request.url.startswith('http://'):
         url = request.url.replace('http://', 'https://', 1)
         code = 301
         return redirect(url, code=code)
 
 def headersify(response):
+    return response
     response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubdomains'
     response.cache_control.max_age = 172800
     return response
@@ -146,7 +148,7 @@ def goodies():
     songs = []
     for song in db.lyrics.find(sort=[('order', pymongo.ASCENDING)]):
         song['display_title'] = song['title'].upper()
-        song['title'] = '_'.join(song['title'].split(' ')).upper().replace('(', '').replace(')', '').replace("'", '').replace('!', '').replace(',', '')
+        song['title'] = '_'.join(song['title'].split(' ')).upper().replace('(', '').replace(')', '').replace("’", '').replace('!', '').replace(',', '')
         songs.append(song)
     
     resp = make_response(render_template('goodies.html', sketches=sketches, songs=songs))

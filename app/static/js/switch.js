@@ -3,8 +3,8 @@ var sketches_display = ['MEETING OF THE MINDS', 'BROS BEFORE FOES', 'ALARMING', 
 var index = 0;
 
 var songs = ['A_SKULE_NITE_FROM_YOUR_COUCH', 'LIFE_IN_QUARANTINE', 'INVESTIGATION_489:_EIGHTEEN_PI_SQUARED', 'THATS_ENGINEERING_BABY']
-var songs_display = ['A SKULE NITE (FROM YOUR COUCH)', 'LIFE IN QUARANTINE', 'INVESTIGATION 489: EIGHTEEN PI SQUARED', "THAT'S ENGINEERING, BABY!"]
-var song_index = 0
+var songs_display = ['A SKULE NITE (FROM YOUR COUCH)', 'LIFE IN QUARANTINE', 'INVESTIGATION 489: EIGHTEEN PI SQUARED', 'THAT’S ENGINEERING, BABY!']
+var song_index = 0;
 
 function checkName(name) {
     return name == document.getElementById('sketch-dropdown').innerHTML;
@@ -88,6 +88,7 @@ function switchSong(song, song_display) {
         document.getElementById('song-dropdown').innerHTML = songs_display[song_index];
 
     } else {
+        console.log('called with SONG: ', song, ' and SONG_DISPLAY: ', song_display);
         // Hide old sketch
         document.getElementById(songs[song_index]).classList.toggle('d-none');
 
@@ -96,6 +97,8 @@ function switchSong(song, song_display) {
         document.getElementById('song-dropdown').innerHTML = song_display;
 
         // Update index
+        console.log('song index before clicking: ', song_index);
         song_index = songs_display.findIndex(checkSongName);
+        console.log('song index after clicking: ', song_index);
     }
 }
