@@ -93,12 +93,21 @@ body {
 .curtain-right {
     background-image: url('../../static/img/curtain-right.png');
 }
+.curtain-top {
+    background-image: url('../../static/img/curtains-top.png');
+    background-size: 100% auto;
+    width: 100%;
+}
+
 */
 
 .curtains {   
     width: 100vw;
     z-index: 300;
     background-color: #111;
+}
+
+.curtain-top img {
 }
 
 .iframe-container {
@@ -208,6 +217,9 @@ body {
 }
 .script-dial {
 }
+.script-dial-ital {
+    font-style: italic;
+}
 .script-slug {
     font-style: italic;
     text-transform: uppercase;
@@ -223,13 +235,18 @@ body {
 
 .timeline-wrapper-wrapper {
     overflow-y: hidden;
+    overflow-x: visible;
 }
 
 .timeline-item {
     display: flex;
+    width: 100%;
 }
 
 
+.timeline-item {
+    z-index: 100;
+}
 /*.timeline-item p {
     width: 50%;
 }*/
