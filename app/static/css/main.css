@@ -128,41 +128,6 @@ body {
 .scroll-active {
 }
 
-/* Intro page */
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-.projected-text {
-    opacity: 0;
-    animation-name: fadein;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    position: relative;
-    z-index: 200;
-    transition: top 1s, bottom 1s, margin 1s, padding 1s, left 1s, right 1s;
-}
-
-.projected-text:nth-of-type(1) {
-    animation-delay: 1s;
-}
-.projected-text:nth-of-type(2) {
-    animation-delay: 2s;
-}
-.projected-text:nth-of-type(3) {
-    animation-delay: 3s;
-}
-.projected-text:nth-of-type(4) {
-    animation-delay: 4s;
-}
-.projected-text:nth-of-type(5) {
-    animation-delay: 5s;
-}
-
 
 /* People Page */
 .people-group {
@@ -256,22 +221,18 @@ body {
     position: relative;
 }
 
+.timeline-wrapper-wrapper {
+    overflow-y: hidden;
+}
+
 .timeline-item {
     display: flex;
-    margin-bottom: 100px;
 }
 
 
 /*.timeline-item p {
     width: 50%;
 }*/
-
-.event-desc {
-    position: absolute;
-    opacity: 1;
-    transform: translateY(75px);
-    z-index: 100;
-}
    
 .timeline-wrapper > .timeline-item:nth-child(even) {
     justify-content: right;
