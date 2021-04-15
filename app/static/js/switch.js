@@ -11,7 +11,7 @@ function checkName(name) {
 }
 
 function checkSongName(name) {
-    return name == document.getElementById('sketch-dropdown').innerHTML;
+    return name == document.getElementById('song-dropdown').innerHTML;
 }
 
 function switchSketch(sketch, sketch_display) {
