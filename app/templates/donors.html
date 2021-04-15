@@ -5,39 +5,39 @@
 {% block content %}
     <section class='container'>
 
-      <p class='text-center sub-font fs-3 my-3'>To celebrate a century of laughter, Skule Nite alumni have established a new student scholarship - making sure that students have the support they need to pursue both academics and extracurriculars. We're grateful to all of the donors who have made this scholarship possible for the future students of Skule Nite.</p>
+      <p class='text-center text-primary sub-font fs-2 my-3'>To celebrate a century of laughter, Skule Nite alumni have established a new student scholarship - making sure that students have the support they need to pursue both academics and extracurriculars. We're grateful to all of the donors who have made this scholarship possible for the future students of Skule Nite.</p>
   
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> PRODUCTION ROW ($5,000+) </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5'> PRODUCTION ROW ($5,000+) </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='text-center'>
-        {% for donor in produc %}
-            <span class='name-credit sub-font fs-5 mx-3'>{{donor}}</span>
+      <section class='d-flex flex-row justify-content-center flex-wrap text-center'>
+        {% for donor in prodro %}
+            <span class='col-12 col-xs-6 col-md-4 col-xl-3 sub-font fs-3 mx-3'>{{donor}}</span>
         {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE LEGEND ($1,921 - $4,999) </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5'> SKULE NITE LEGEND ($1,921 - $4,999) </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='text-center'>
+      <section class='d-flex flex-row justify-content-center flex-wrap text-center'>
         {% for donor in legend %}
-            <span class='name-credit sub-font fs-5 mx-3'>{{donor}}</span>
+        <span class='col-12 col-xs-6 col-md-4 col-xl-3 sub-font fs-3 mx-3'>{{donor}}</span>
         {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE FOSSIL ($1,000 - $1,921) </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5'> SKULE NITE FOSSIL ($1,000 - $1,921) </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='text-center'>
+      <section class='d-flex flex-row justify-content-center flex-wrap text-center'>
         {% for donor in fossil %}
-            <span class='name-credit sub-font fs-5 mx-3'>{{donor}}</span>
+            <span class='col-12 col-xs-6 col-md-4 col-xl-3 sub-font fs-3 mx-3'>{{donor}}</span>
         {% endfor %}
       </section>
 
-      <h1 class='h1 mt-2 text-center sub-font pt-5' id='creative'> SKULE NITE FLUNKY ($100 - $999) </h1>
+      <h1 class='h1 mt-2 text-center sub-font pt-5'> SKULE NITE FLUNKY ($100 - $999) </h1>
       <hr class='people-hr border-dark mb-5' />
-      <section class='text-center'>
+      <section class='d-flex flex-row justify-content-center flex-wrap text-center'>
         {% for donor in flunky %}
-            <span class='name-credit sub-font fs-5 mx-3'>{{donor}}</span>
+            <span class='col-12 col-xs-6 col-md-4 col-xl-3 sub-font fs-3 mx-3'>{{donor}}</span>
         {% endfor %}
-      </section>  
+      </div>  
 
     </section>
 {% endblock %}
