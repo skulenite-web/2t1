@@ -1,7 +1,7 @@
 from flask import render_template, request, make_response, redirect, url_for
 from flask_pymongo import pymongo
 from wtforms import Form, StringField, TextAreaField, validators
-import datetime
+from datetime import datetime
 from app import app
 from app import db
 
@@ -20,7 +20,7 @@ from app import db
 
 class CommentForm(Form):
     name = StringField('Name', [validators.DataRequired(), validators.Length(min=1, max=100)])
-    email = StringField('Email Address', [validators.DataRequired(), validators.Email()])
+    #email = StringField('Email Address', [validators.DataRequired(), validators.Email()])
     uoft = StringField('Grad Year (optional)', [validators.Length(min=3, max=15)])
     comment = TextAreaField('Comment', [validators.DataRequired(), validators.Length(min=1, max=300)])
 
@@ -55,14 +55,21 @@ def home():
     if (request.method == 'POST' and form.validate()):
         comment = {
             'name'      :   form.name.data,
-            'email'     :   form.email.data,
+            #'email'     :   form.email.data,
             'uoft'      :   form.uoft.data,
-            'comment'   :   form.comment.data
+            'comment'   :   form.comment.data,
+            'datetime'  :   datetime.now(),
+            'date-readable' : datetime.now().strftime('%B %-d at %I:%M'),
+            'approved' :   'false'
         }
         db.comments.insert_one(comment)
         #flash('Thanks for submitting your comment!')
         return redirect(url_for('home'))
-    resp = make_response(render_template('watch.html', form=form))
+    comments = []
+    for comment in db.comments.find(sort=[('datetime', pymongo.DESCENDING)]):
+        if (comment['approved'] == 'true' or comment['approved'] == 'yes'):
+            comments.append(comment)
+    resp = make_response(render_template('watch.html', form=form, comments=comments))
     return headersify(resp)
 
 
