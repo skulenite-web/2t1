@@ -1,50 +1,50 @@
-var order = ['ALARMING', 'BROS_BEFORE_FOES','BUBBLE_COURT','BUSINESS_CARDS','JUST_A_TREE'];
+var sketches = ['ALARMING', 'BROS_BEFORE_FOES','BUBBLE_COURT','BUSINESS_CARDS','JUST_A_TREE'];
+var sketches_display = ['ALARMING', 'BROS BEFORE FOES','BUBBLE COURT','BUSINESS CARDS','JUST A TREE'];
 var index = 0;
 
 function checkName(name) {
     return name == document.getElementById('sketch-dropdown').innerHTML;
 }
 
-function switchSketch(sketch) {
+function switchSketch(sketch, sketch_display) {
     if (sketch === 'next') {
         // Hide old sketch
-        document.getElementById(order[index]).classList.toggle('d-none');
+        document.getElementById(sketches[index]).classList.toggle('d-none');
 
         // Update index
         index = index + 1;
-        if (index === order.length) {
+        if (index === sketches.length) {
             index = 0;
         }
         
         // Show new sketch and update sketch title
-        document.getElementById(order[index]).classList.toggle('d-none');
-        document.getElementById('sketch-dropdown').innerHTML = order[index];
+        document.getElementById(sketches[index]).classList.toggle('d-none');
+        document.getElementById('sketch-dropdown').innerHTML = sketches_display[index];
 
     } else if (sketch === 'prev') {
         // Hide old sketch
-        document.getElementById(order[index]).classList.toggle('d-none');
+        document.getElementById(sketches[index]).classList.toggle('d-none');
         console.log('hiding index == ', index);
         
         // Update index
         index = index - 1;
         if (index === -1) {
-            index = order.length-1;
+            index = sketches.length-1;
         }
 
         // Show new sketch and update sketch title
-        document.getElementById(order[index]).classList.toggle('d-none');
-        document.getElementById('sketch-dropdown').innerHTML = order[index];
+        document.getElementById(sketches[index]).classList.toggle('d-none');
+        document.getElementById('sketch-dropdown').innerHTML = sketches_display[index];
 
     } else {
         // Hide old sketch
-        document.getElementById(order[index]).classList.toggle('d-none');
+        document.getElementById(sketches[index]).classList.toggle('d-none');
 
-        console.log('trying to show sketch: ', sketch);
         // Show new sketch and update sketch title
         document.getElementById(sketch).classList.toggle('d-none');
-        document.getElementById('sketch-dropdown').innerHTML = sketch;
+        document.getElementById('sketch-dropdown').innerHTML = sketch_display;
 
         // Update index
-        index = order.findIndex(checkName);
+        index = sketches_display.findIndex(checkName);
     }
 }
