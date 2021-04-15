@@ -3,8 +3,8 @@
 {% block team_js %}<script src="{{ url_for('static', filename='js/show-on-scroll.js') }}" type='text/javascript'></script>{% endblock %}
 
 {% block content %}
-    <section class='timeline-wrapper-wrapper'>
-        <div class='timeline-wrapper mt-5' style='transform:translateY(100px);'>
+    <section class='d-none d-lg-flex timeline-wrapper-wrapper'>
+        <div class='timeline-wrapper mt-5' style='transform:translateY(140px);'>
         {% for event in events %}
             <div class='timeline-item'>
                 <div class='card shadow script translate-middle-y{% if event['date'] == '2021' %} mb-2{% else %} mb-1{% endif %}' style='max-width: 50%;'>
@@ -36,4 +36,22 @@
         </div>
     </section>
 
+    <section class='d-flex d-lg-none timeline-wrapper-wrapper-narrow'>
+        <div class='timeline-wrapper-narrow mt-2'>
+        {% for event in events %}
+            <div class='row mb-3'>
+                <div class='card shadow script {% if event['date'] == '2021' %} mb-2{% else %} mb-1{% endif %}'>
+                    <div class='card-body'>
+                        <h5 class='fw-bold card-title'>{{event['date']}}</h5>
+                        <ul>
+                            {% for desc in event['description'] %}
+                            <li class='card-text'>{{desc}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
 {% endblock %}
