@@ -231,7 +231,9 @@ body {
     width: 80vw;
     margin: 0 auto;
     position: relative;
-}
+    transform:          translateX(0);
+    -webkit-transform:  translateX(0);
+}  
 
 .timeline-wrapper-wrapper, .timeline-wrapper-wrapper-narrow {
     overflow-y: hidden;
@@ -282,11 +284,13 @@ body {
 }
 
 .timeline-wrapper > .timeline-item:nth-child(even)::after {
-    transform: translateX(100%);
+    transform:          translateX(100%);
+    -webkit-transform:  translateX(100%);
 }
 
 .timeline-wrapper-narrow > .timeline-item::after {
-    transform: translateX(50%);
+    transform:          translateX(50%);
+    -webkit-transform:  translateX(50%);
 }
 
 /* Helpers for positioning */
