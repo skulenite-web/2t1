@@ -41,15 +41,17 @@ def headersify(response):
 ### PAGES ###
 #############
 
-# Landing - Intro & Main Page
-@app.route('/')
+# Legacy - Coming Soon page
+@app.route('/comingsoon')
 def comingsoon():
     resp = make_response(render_template('comingsoon.html'))
     return headersify(resp)
 
-@app.route('/shallnotpass/index')
-@app.route('/shallnotpass/watch')
-@app.route('/shallnotpass/home', methods=['GET', 'POST'])
+# Landing - Intro & Main Page
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
+@app.route('/watch', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     form = CommentForm(request.form)
     if (request.method == 'POST' and form.validate()):
@@ -75,8 +77,8 @@ def home():
 
 
 # Team 
-@app.route('/shallnotpass/team')
-@app.route('/shallnotpass/meettheteam')
+@app.route('/team')
+@app.route('/meettheteam')
 def team():
     cast = []
     crew = []
@@ -107,26 +109,26 @@ def team():
     resp = make_response(render_template('team.html', cast=cast, crew=crew, band=band, creative=creative, marketing=marketing, writers=writers))
     return headersify(resp)
 
-@app.route('/shallnotpass/cast')
+@app.route('/cast')
 def cast():
     return redirect(url_for('team', _anchor='cast'))
-@app.route('/shallnotpass/band')
+@app.route('/band')
 def band():
     return redirect(url_for('team', _anchor='band'))
-@app.route('/shallnotpass/crew')
+@app.route('/crew')
 def crew():
     return redirect(url_for('team', _anchor='crew'))
-@app.route('/shallnotpass/marketing')
+@app.route('/marketing')
 def marketing():
     return redirect(url_for('team', _anchor='marketing'))
-@app.route('/shallnotpass/creative')
+@app.route('/creative')
 def creative():
     return redirect(url_for('team', _anchor='creative'))
 
 
 # History
-@app.route('/shallnotpass/history')
-@app.route('/shallnotpass/timeline')
+@app.route('/history')
+@app.route('/timeline')
 def history():
     events = []
     for event in db.history.find(sort=[('order', pymongo.ASCENDING)]):
@@ -136,7 +138,7 @@ def history():
 
 
 # Goodies
-@app.route('/shallnotpass/goodies')
+@app.route('/goodies')
 def goodies():
 
     sketches = []
@@ -153,21 +155,21 @@ def goodies():
     resp = make_response(render_template('goodies.html', sketches=sketches, songs=songs))
     return headersify(resp)
 
-@app.route('/shallnotpass/sketches')
+@app.route('/sketches')
 def sketches():
     return redirect(url_for('goodies', _anchor='sketches'))
-@app.route('/shallnotpass/lyrics')
+@app.route('/lyrics')
 def lyrics():
     return redirect(url_for('goodies', _anchor='lyrics'))
 
 
-@app.route('/shallnotpass/programme')
+@app.route('/programme')
 def programme():
     resp = make_response(render_template('programme.html'))
     return headersify(resp)
 
 # Donor Thanks
-@app.route('/shallnotpass/donors')
+@app.route('/donors')
 def donors():
     prodro = []
     legend = []
@@ -192,4 +194,5 @@ def donors():
 ## 404
 @app.errorhandler(404)
 def page_not_found(e):
-    return """ooops!""", e
+    resp = make_response(render_template('error.html'))
+    return headersify(resp), 404
