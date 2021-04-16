@@ -201,6 +201,17 @@ body {
 }
 
 /* GOODIES PAGE */
+@media (min-width: 768px) {
+    .goodies-box {
+        width: 90%;
+    }
+}
+@media (min-width: 992px) {
+    .goodies-box {
+        width: 80%;
+    }
+}
+
 .script {
     font-family: 'Courier', 'monospace';
 }
@@ -216,6 +227,9 @@ body {
     margin-bottom: 0;
 }
 .script-dial {
+    width: 60%;
+    text-align: left;
+    align-items: center;
 }
 .script-dial-ital {
     font-style: italic;

@@ -9,8 +9,8 @@
         <section id="sketches" class='container mb-4'>
             <h1 class='h1 text-center sub-font'> SKETCHES </h1>
             <hr class='people-hr border-dark mb-4' />
-            <div class='row w-100 w-sm-80 m-auto mb-4'>
-              <div class='card text-center shadow script g-0 w-80 m-auto'>
+            <div class='row goodies-box m-auto mb-4'>
+              <div class='card text-center shadow script g-0 m-auto'>
                 <!-- nav -->
                 <div id='sketch-box' class='card-header p-0'>
                     <div class='btn-group w-100' role='group' aria-label='Sketch navigation'>
@@ -34,9 +34,9 @@
                 <!-- The Sketch Itself -->
                 <div class='card-body'>
                     {% for sketch in sketches %}
-                        <div class='sketch-script-text {% if sketch['title'] != sketches[0]['title'] %}d-none {% endif %}' id='{{sketch['title']}}'>
+                        <div class='sketch-script-text d-flex flex-column {% if sketch['title'] != sketches[0]['title'] %}d-none {% endif %}' id='{{sketch['title']}}'>
                             {% for line in sketch['script'] %}
-                                <p class='script-{{line['type']}}'> {{line['text']}} </p>
+                                <p class='script-{{line['type']}} {% if line['type'] == 'dial' or line['type'] == 'dial-ital' %}align-self-center{% endif %}'> {{line['text']}} </p>
                             {% endfor %}
                         </div>
                     {% endfor %}
@@ -48,8 +48,8 @@
         <section id="lyrics" class='container mb-4'>
             <h1 class='h1 text-center sub-font'> LYRICS </h1>
             <hr class='people-hr border-dark mb-4' />
-            <div class='row w-100 w-sm-80 m-auto mb-4'>
-              <div class='card text-center shadow script g-0 w-80 m-auto'>
+            <div class='row goodies-box m-auto mb-4'>
+              <div class='card text-center shadow script g-0 m-auto'>
                 <!-- nav -->
                 <div id='song-box' class='card-header p-0'>
                     <div class='btn-group w-100' role='group' aria-label='Song lyric navigation'>
@@ -74,9 +74,9 @@
                 <!-- The Lyrics Themselves -->
                 <div class='card-body'>
                     {% for song in songs %}
-                        <div class='song-script-text text-center {% if song['title'] != songs[0]['title'] %}d-none {% endif %}' id='{{song['title']}}'>
+                        <div class='song-script-text d-flex flex-column  text-center {% if song['title'] != songs[0]['title'] %}d-none {% endif %}' id='{{song['title']}}'>
                             {% for line in song['lines'] %}
-                                <p class='{mb-1'>{{line}}</p>
+                                <p class='mb-1 align-self-center' style='width: 60%'>{{line}}</p>
                             {% endfor %}
                         </div>
                     {% endfor %}
