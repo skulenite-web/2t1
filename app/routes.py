@@ -21,20 +21,18 @@ from app import db
 class CommentForm(Form):
     name = StringField('Name', [validators.DataRequired(), validators.Length(min=1, max=100)])
     #email = StringField('Email Address', [validators.DataRequired(), validators.Email()])
-    uoft = StringField('Grad Year (optional)', [validators.Length(min=3, max=15)])
+    uoft = StringField('Grad Year (optional)')
     comment = TextAreaField('Comment', [validators.DataRequired(), validators.Length(min=1, max=300)])
 
 # Security
 @app.before_request
 def before_request():
-    return
     if request.url.startswith('http://'):
         url = request.url.replace('http://', 'https://', 1)
         code = 301
         return redirect(url, code=code)
 
 def headersify(response):
-    return response
     response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubdomains'
     response.cache_control.max_age = 172800
     return response
@@ -65,8 +63,9 @@ def home():
             'approved' :   'false'
         }
         db.comments.insert_one(comment)
-        #flash('Thanks for submitting your comment!')
-        return redirect(url_for('home'))
+        return 'SUCCESS'
+    if (request.method == 'POST' and not form.validate()):
+        return 'FAILURE'
     comments = []
     for comment in db.comments.find(sort=[('datetime', pymongo.DESCENDING)]):
         if (comment['approved'] == 'true' or comment['approved'] == 'yes'):

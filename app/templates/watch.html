@@ -3,9 +3,10 @@
 {% set nomargin = "true" %}
 {% block nav_watch %}active{% endblock %}
 {% block curtain_scroll %}<script src='{{ url_for('static', filename='js/curtains.js') }}' type='text/javascript'></script>{% endblock %}
+{% block fetch_form_js %}<script src='{{ url_for('static', filename='js/fetch-submit.js') }}' type='text/javascript'></script>{% endblock %}
 
 {% block content %}
-        <div class='d-none d-md-block curtains px-0 mx-0 position-absolute overflow-visible' style='top:106px;'>
+        <div class='d-none d-lg-block curtains px-0 mx-0 position-absolute overflow-visible' style='top:106px;'>
             <!-- Curtains - banner -->
             <div class='curtain-top position-absolute border-none'>
                 <img id='curtain-img' src="{{url_for('static', filename='img/curtains-top.png')}}" width=100%></img>
@@ -53,9 +54,10 @@
 
             <hr class='border-dark mb-3'>
             <div class='row'>
-                <form action='{{url_for('home')}}' method='post'>
+                <form id='comment-form' onsubmit='return fetchpost()'>
                     {{form.csrf_token}}
                     <div class='row g-1 mb-3'>
+                        <input type='hidden' id='form-submit-url-endpoint' value='{{url_for('home')}}'>
                         <div class='form-floating col-sm-6 mb-3'>
                             {{form.name(class_='form-control', placeholder='Knights Kool')}}
                             {{form.name.label}}
@@ -70,6 +72,7 @@
                         {{form.comment.label(class_='form-label')}}
                     </div>
                     <button type='submit' class='btn btn-primary'>Submit</button>
+                    <div id='form-results-box' class='mt-2 text-muted'></div>
                 </form>
             </div>
         </div>
