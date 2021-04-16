@@ -36,7 +36,7 @@
         {% endif %}
 
         {% if nav == "active" %}
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-info shadow {% if nomargin == 'false' %} fixed-top mb-4 {% endif %}" id="navbar">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-info shadow {% if nomargin == 'false' %} fixed-top mb-4 {% endif %}" id="navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('home') }}">
                 <img id="navlogo_img{% if nomargin != 'false' %}_watchpage{% endif %}" src='{{ url_for('static', filename='img/logo_nav.png') }}'>
