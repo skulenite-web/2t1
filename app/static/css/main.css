@@ -257,11 +257,8 @@ body {
 .timeline-item {
     display: flex;
     width: 100%;
-}
-
-
-.timeline-item {
     z-index: 200;
+    transition: all 0.1s ease;
 }
 
    
