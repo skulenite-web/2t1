@@ -52,7 +52,7 @@ body {
     background-size: cover;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .jumbotron-image {
         height: 200px;
     }
@@ -274,12 +274,21 @@ body {
     }
 }
 
-@-moz-document url-prefix () {
+@supports (-moz-appearance:meterbar) {
     .timeline-wrapper-wrapper {
         display: none;
     }
     .timeline-wrapper-wrapper-narrow {
         display: flex;
+    }
+
+    @media (min-width: 992px) {
+        .timeline-wrapper-wrapper {
+            display: flex;
+        }
+        .timeline-wrapper-wrapper-narrow {
+            display: none;
+        }
     }
 }
 

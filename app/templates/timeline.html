@@ -3,7 +3,7 @@
 {% block team_js %}<script src="{{ url_for('static', filename='js/show-on-scroll.js') }}" type='text/javascript'></script>{% endblock %}
 
 {% block content %}
-    <section class='d-none d-lg-flex timeline-wrapper-wrapper'>
+    <section class='d-none timeline-wrapper-wrapper'>
         <div class='timeline-wrapper mt-5' style='transform:translateY(140px);'>
         {% for event in events %}
             <div class='timeline-item'>
@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <section class='d-flex d-lg-none timeline-wrapper-wrapper-narrow'>
+    <section class='d-flex timeline-wrapper-wrapper-narrow'>
         <div class='timeline-wrapper-narrow mt-2'>
         {% for event in events %}
             <div class='row mb-3'>
