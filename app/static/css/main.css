@@ -249,6 +249,36 @@ body {
     -webkit-transform:  translateX(0);
 }  
 
+@media (min-width: 992px) {
+    .timeline-wrapper-narrow {
+        width: 55vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .timeline-wrapper-narrow {
+        width: 45vw;
+    }
+}
+
+@media (min-width: 1400px) {
+    .timeline-wrapper-narrow {
+        width: 38vw;
+    }
+    .timeline-wrapper {
+        width: 60vw;
+    }
+}
+
+@-moz-document url-prefix () {
+    .timeline-wrapper-wrapper {
+        display: none;
+    }
+    .timeline-wrapper-wrapper-narrow {
+        display: flex;
+    }
+}
+
 .timeline-wrapper-wrapper, .timeline-wrapper-wrapper-narrow {
     overflow-y: hidden;
     overflow-x: visible;
