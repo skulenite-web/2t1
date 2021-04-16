@@ -23,13 +23,14 @@
         <div class='container mt-4'>
             <div class='row'>
                 <div class='d-inline-flex justify-content-center my-3 mt-5'>
-                    <a class='btn btn-primary btn-lg text-center' href='https://www.youtube.com/live_chat?&v=GNPgH-SJO7w' target='_blank'>CLICK HERE TO CHAT WITH OTHER VIEWERS</a>
+                    <a class='btn btn-primary btn-lg text-center me-2' href='https://www.youtube.com/live_chat?&v=GNPgH-SJO7w' target='_blank'>CHAT WITH OTHER VIEWERS</a>
+                    <a class='btn btn-primary btn-lg text-center' href='{{ url_for('static', filename='assets/programme.pdf') }}' target='_blank'>DOWNLOAD THE PROGRAMME</a>
                 </div>
             </div>
             
             {% if comments|length != 0 %}
             <h1 class='h1 mt-2 sub-font text-center pt-3 fw-bold'>
-                AUDIENCE REVIEWS!
+                MESSAGE BOARD
             </h1>
             <hr class='border-dark mb-3'>
             <div class='container g-3'>
@@ -42,15 +43,10 @@
                     </div>
                 {% endfor %}
             </div>
-
-            <h1 id='leave-review' class='h1 mt-2 sub-font text-center pt-3'>
-                LEAVE YOUR OWN!
-            </h1>
-            {% else %}
-            <h1 id='leave-review' class='h1 mt-2 sub-font text-center pt-3'>
-                LEAVE A REVIEW!
-            </h1>
             {% endif %}
+            <h1 id='leave-review' class='h1 mt-2 sub-font text-center pt-3'>
+                POST A MESSAGE FOR THE TEAM
+            </h1>
 
             <hr class='border-dark mb-3'>
             <div class='row'>
