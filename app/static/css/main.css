@@ -236,6 +236,9 @@ body {
     align-items: center;
 }
 .script-dial-ital {
+    width: 60%;
+    text-align: left;
+    align-items: center;
     font-style: italic;
 }
 .script-slug {
