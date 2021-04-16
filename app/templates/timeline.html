@@ -3,6 +3,7 @@
 {% block team_js %}<script src="{{ url_for('static', filename='js/show-on-scroll.js') }}" type='text/javascript'></script>{% endblock %}
 
 {% block content %}
+    <!-- Psst, adventurer! If you're on Firefox and want to see this page look a bit cooler, go ahead and swap around the 'd-none' and 'd-flex' classes of the next two <section> elements. It's worth it, I promise! -->
     <section class='d-none timeline-wrapper-wrapper'>
         <div class='timeline-wrapper mt-5' style='transform:translateY(140px);'>
         {% for event in events %}
