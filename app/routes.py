@@ -159,10 +159,12 @@ def sketches():
 @app.route('/shallnotpass/lyrics')
 def lyrics():
     return redirect(url_for('goodies', _anchor='lyrics'))
-@app.route('/shallnotpass/promo')
-def promo():
-    return redirect(url_for('goodies', _anchor='promo'))
 
+
+@app.route('/shallnotpass/programme')
+def programme():
+    resp = make_response(render_template('programme.html'))
+    return headersify(resp)
 
 # Donor Thanks
 @app.route('/shallnotpass/donors')
