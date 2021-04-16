@@ -29,22 +29,21 @@
             </div>
             
             {% if comments|length != 0 %}
-            <h1 class='h1 mt-2 sub-font text-center pt-3 fw-bold'>
+            <h1 class='h1 mt-2 sub-font text-center pt-3'>
                 MESSAGE BOARD
             </h1>
             <hr class='border-dark mb-3'>
             <div class='container g-3'>
-                {% if comments|length > 5 %}<a href='#leave-review' class='btn btn-sm btn-danger mb-3'>Leave your own!</a>{% endif %}
+                {% if comments|length > 5 %}<a href='#leave-comment' class='btn btn-sm btn-danger mb-3'>Leave your own!</a>{% endif %}
                 {% for comment in comments %}
-                    <div class='row'>
-                        <span class='float-start fs-4 fw-bold'>{{comment['name']}}{% if comment['uoft'] != '' %} ({{comment['uoft']}}){% endif %}</span>
-                        <span class='float-end fs-6 text-muted'>{{comment['date-readable']}}</span>
-                        <p class='fs-5'>{{comment['comment']}}</p>
+                    <div class='comment-item pb-2'>
+                        <span class='fs-5 fw-bold'>{{comment['name']}}{% if comment['uoft'] != '' %} ({{comment['uoft']}}){% endif %}</span><span class='float-end fs-6 fst-italic text-muted'>{{comment['date-readable']}}</span>
+                        <p class='fs-6'>{{comment['comment']}}</p>
                     </div>
                 {% endfor %}
             </div>
             {% endif %}
-            <h1 id='leave-review' class='h1 mt-2 sub-font text-center pt-3'>
+            <h1 id='leave-comment' class='h1 mt-2 sub-font text-center pt-3'>
                 POST A MESSAGE FOR THE TEAM
             </h1>
 

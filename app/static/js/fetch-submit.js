@@ -16,7 +16,7 @@ function fetchpost() {
     })
     .then(function (text) {
         if (text === 'SUCCESS') {
-            document.getElementById('form-results-box').innerHTML = "Your review has been submitted! We'll review it and it will appear on the site shortly.";
+            document.getElementById('form-results-box').innerHTML = "Your comment has been submitted! We'll review it and it will appear on the site shortly.";
             document.getElementById('form-results-box').style.opacity = 1;
         } else {
             document.getElementById('form-results-box').innerHTML = "That didn't work. Try resubmitting, and make sure you fill out your name and a comment.";
