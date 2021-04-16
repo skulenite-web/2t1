@@ -2,6 +2,7 @@ from flask import render_template, request, make_response, redirect, url_for
 from flask_pymongo import pymongo
 from wtforms import Form, StringField, TextAreaField, validators
 from datetime import datetime
+from pytz import timezone
 from app import app
 from app import db
 
@@ -55,13 +56,14 @@ def comingsoon():
 def home():
     form = CommentForm(request.form)
     if (request.method == 'POST' and form.validate()):
+        tz = timezone('US/Eastern')
         comment = {
             'name'      :   form.name.data,
             #'email'     :   form.email.data,
             'uoft'      :   form.uoft.data,
             'comment'   :   form.comment.data,
-            'datetime'  :   datetime.now(),
-            'date-readable' : datetime.now().strftime('%B %-d at %I:%M'),
+            'datetime'  :   datetime.now(tz),
+            'date-readable' : datetime.now(tz).strftime('%B %-d at %H:%M'),
             'approved' :   'false'
         }
         db.comments.insert_one(comment)
