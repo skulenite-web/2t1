@@ -1,0 +1,964 @@
+<html>
+    <head>
+        <title>SkuleNite 2T1</title>
+
+        <!-- Styling + Bootstrap -->
+        <link rel='stylesheet' href='bootstrap/bootstrap.min.css'>
+        <link rel='stylesheet' href='css/main.css'>
+        <script src='bootstrap/bootstrap.bundle.min.js'></script>
+        
+        <!-- Custom JS -->
+        <script src="js/switch.js" type='text/javascript'></script>
+        <script src='js/nav-scroll.js'></script>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="96x96" href='img/favicon-96x96.png'>
+        <link rel="icon" type="image/png" sizes="32x32" href='img/favicon-32x32.png'>
+        <link rel="icon" type="image/png" sizes="16x16" href='img/favicon-16x16.png'>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+        <link href="https://use.typekit.net/gbb4rnm.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    </head>
+    <body class="bg-info text-dark">
+        <div class="jumbotron text-light jumbotron-image" style="background-image: url( img/hero.jpg );">
+        </div>
+
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-info shadow fixed-top mb-4" id="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img id="navlogo_img" src='img/logo_nav.png'>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-controls="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navToggle">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 sub-font">
+                <li class="nav-item">
+                  <a class="nav-link fs-2" aria-current="page" href="index.html">Watch</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="programme.html">Programme</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-2" href="goodies.html">Goodies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="history.html">History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="donors.html">Donors</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <section>
+
+            <div class="main">
+                <section class='container'>
+                
+                    <!-- SKETCHES -->
+                    <section id="sketches" class='container mb-4'>
+                        <h1 class='h1 text-center sub-font'> SKETCHES </h1>
+                        <hr class='people-hr border-dark mb-4' />
+                        <div class='row goodies-box m-auto mb-4'>
+                        <div class='card text-center shadow script g-0 m-auto'>
+                            <!-- nav -->
+                            <div id='sketch-box' class='card-header p-0'>
+                                <div class='btn-group w-100' role='group' aria-label='Sketch navigation'>
+                                    <a role='button' class='btn w-10 text-wrap fs-xs-4 fs-sm-3 pb-0' onclick="switchSketch('prev', '');" aria-label='Previous sketch'>
+                                        <span aria-hidden='true'>&laquo;</span>
+                                    </a>
+                                    <div class='btn-group w-80' role='group'>
+                                        <button id='sketch-dropdown' type='button' class='btn dropdown-toggle border-start border-end text-wrap fs-xs-4 fs-sm-3 pb-0' data-bs-toggle="dropdown" aria-expanded='false' aria-label='Pick a sketch'>MEETING OF THE MINDS</button>
+                                        <ul class='dropdown-menu w-100' aria-labelledby='sketch-dropdown'>
+                                            <li><a class='dropdown-item' onclick="switchSketch('MEETING_OF_THE_MINDS', 'MEETING OF THE MINDS');">MEETING OF THE MINDS</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('BROS_BEFORE_FOES', 'BROS BEFORE FOES');">BROS BEFORE FOES</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('ALARMING', 'ALARMING');">ALARMING</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('LETTER_BY_LETTER', 'LETTER BY LETTER');">LETTER BY LETTER</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('BUBBLE_COURT', 'BUBBLE COURT');">BUBBLE COURT</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('MOOOOOM', 'MOOOOOM');">MOOOOOM</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('JUST_A_TREE', 'JUST A TREE');">JUST A TREE</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSketch('BUSINESS_CARDS', 'BUSINESS CARDS');">BUSINESS CARDS</a></li>
+                                        </ul>
+                                    </div>
+                                    <a role='button' class='btn w-10 text-wrap fs-xs-4 fs-sm-3 pb-0' onclick="switchSketch('next', '');" aria-label='Next sketch'>
+                                        <span aria-hidden='true'>&raquo;</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- The Sketch Itself -->
+                            <div class='card-body'>
+                                <div class='sketch-script-text d-flex flex-column text-center ' id='MEETING_OF_THE_MINDS'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Powerpoint style text appears on screen. </p>
+                                    <p class='script-char '> Text </p>
+                                    <p class='script-dial align-self-center'> In February 2021, climate scientists met virtually to discuss the inventions that were being developed to stop climate change. </p>
+                                    <p class='script-action '> Cut to Scientist 1. All scientists are on separate video calls. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> Climate change has become a massive issue. Our world is dying. And absolutely no one saw this coming.  </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> But there are a lot of inventions in the works that give us hope. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> The first is a theoretical device that will allow people to get around without emitting any carbon dioxide, while also getting moderate-to-intense cardio workout. </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> It is called: Bicycle. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> Now if that sounds too good to be true... It’s because it is.  </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> But scientists around the globe are working hard to change that. </p>
+                                    <p class='script-char '> Scientist 4 </p>
+                                    <p class='script-dial align-self-center'> I’ve personally never seen a bicycle but it’s been described to me as a tricycle with fewer wheels. </p>
+                                    <p class='script-char '> Scientist 2 </p>
+                                    <p class='script-dial align-self-center'> It’s like an exercise bike, but the wheels make the ground move. Or maybe the ground makes the wheels move. We’re not sure yet. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> Imagine a unicycle engaged in coitus with another unicycle and gave birth to conjoined twins. </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> That’s the bicycle in a nutshell. </p>
+                                    <p class='script-char '> Scientist 2 </p>
+                                    <p class='script-dial align-self-center'> Speaking of nutshells, we’re developing Earth-grown meal substitutes to meat and dairy. We call them “Salads”. </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> Sumptuous Alternatives to Liverwurst and Deli meats, or SALAD for short. Salads are meals made entirely of plants. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> I ate a salad- salad? Saaalad- </p>
+                                    <p class='script-char '> Scientist 2 </p>
+                                    <p class='script-dial align-self-center'> Salad. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> I ate a salad once and I did not care for it. I expected it to taste like steak and somehow it did not. I’m still trying to figure out why… </p>
+                                    <p class='script-char '> Scientist 2 </p>
+                                    <p class='script-dial align-self-center'> The main benefit of eating a salad (pause) is that rabbits also eat salad (pause) so if you eat one you might become friends with a rabbit. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> I understand the rabbit hypothesis, but until Salads taste like steak I just don’t see it as a viable alternative. </p>
+                                    <p class='script-char '> Scientist 4 </p>
+                                    <p class='script-dial align-self-center'> Now, while we’re lowering emissions with SALADS and rabbit friends, we need to find a way to get rid of the carbon that’s already in the air. </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-dial align-self-center'> Legend says they existed 100 years ago, an invention by the name of: tree. </p>
+                                    <p class='script-action '> Audible gasp from all Scientists. </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> We’ve been talking about trees as long as I can remember but no one’s cracked it yet. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> A magical invention that we just plant and it cleans the atmosphere?! </p>
+                                    <p class='script-action '> Scientist 1 scoffs. </p>
+                                    <p class='script-char '> Scientist 1 (cont.) </p>
+                                    <p class='script-dial align-self-center'> I’ll believe it when I see it. </p>
+                                    <p class='script-char '> Scientist 2 </p>
+                                    <p class='script-dial align-self-center'> I wish I was a tree. Then I would have a big trunk and bark for skin. Leaves for hair! </p>
+                                    <p class='script-char '> Scientist 3 </p>
+                                    <p class='script-dial align-self-center'> Being a tree would be great because your tree friends from the forest couldn’t run away from you like the kids in high school used to run away from me. I didn’t even have lice. It was a rumor. Thanks alot, Cindy Dunkleman. </p>
+                                    <p class='script-char '> Scientist 4 </p>
+                                    <p class='script-dial align-self-center'> Trees, bicycles, and salads? I don’t want to jinx it folks but I think we might have just solved climate change. </p>
+                                    <p class='script-action '> Cut to Scientist 1 trying to eat a salad and hating it. They put the salad down. </p>
+                                    <p class='script-char '> Scientist 1 </p>
+                                    <p class='script-dial align-self-center'> Oh, salad? No thank you. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='BROS_BEFORE_FOES'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Director looks at Agent Francois and Agent Banks.  </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> That is the plan. Now I don't need to  remind you that this is classified  information, top secret?   </p>
+                                    <p class='script-action '> Cut to split screen of Agent Francois & Agent Banks nodding synchronized. </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> Absolutely, we won’t tell anyone.  </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> Great. </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> Except our boys. </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> Your boys? </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> Year, our boys. Jimbo, Tyler- </p>
+                                    <p class='script-char '> Agent Banks  </p>
+                                    <p class='script-dial align-self-center'> Slippery Pete- </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> They’re gonna wanna know. </p>
+                                    <p class='script-char '> Agent Banks  </p>
+                                    <p class='script-dial align-self-center'> Very true. </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> You cannot talk to your boys about this! </p>
+                                    <p class='script-char '> Agent Banks  </p>
+                                    <p class='script-dial align-self-center'> But, if we can’t even tell our boys, then who can we tell? </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> NO ONE! This is very confidential! </p>
+                                    <p class='script-char '> Agent Banks  </p>
+                                    <p class='script-dial align-self-center'> Oh so, it’s on a need to know basis. </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> Oui. </p>
+                                    <p class='script-char '> Agent Banks (to Agent Francois)  </p>
+                                    <p class='script-dial align-self-center'> So we should only tell the boys that  need to know.   </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> None of your boys need to know.  </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> Well Jimbo needs to know cause he’s gonna find out, and I want him to hear it from me.   </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> How is he going to find out?!  </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> Well I just texted Slippery Pete and he has loose lips.  </p>
+                                    <p class='script-char '> Agent Banks  </p>
+                                    <p class='script-dial align-self-center'> He really does! </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> WHAT?!!??!  </p>
+                                    <p class='script-char '> Agent Banks  </p>
+                                    <p class='script-dial align-self-center'> Sir, you’ve been working at the CIA  for 20 years and you haven’t ever told your boys anything?   </p>
+                                    <p class='script-char '> Director </p>
+                                    <p class='script-dial align-self-center'> My god, you’re right. I may not even have boys.   </p>
+                                    <p class='script-char '> Agent Francois  </p>
+                                    <p class='script-dial align-self-center'> Hey, Look again.  </p>
+                                    <p class='script-action '> Agent Francois and Agent Banks looking lovingly at Director. Director sheds a tear. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='ALARMING'>
+                                    <p class='script-slug '> fade in. </p>
+                                    <p class='script-action '> Al lying in bed. Alarm standing over him. SFX alarm noise. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> Good Moooorning Al! It’s time to wake up! </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> But it’s 7 AM! </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> Yes it is! Remember, the zombies are coming today!  </p>
+                                    <p class='script-action '> Distant zombie SFX. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> Ugg so annoying. Snooze. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> Wow, snoozed again. 5th time this week. Whatever. Maybe I shouldn’t have told you about the zombies. Maybe I should just let them eat you.  </p>
+                                    <p class='script-action '> Distant zombie SFX.  </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> No, I’ll wake up- </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> -Oh WILL YOU NOW? </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> Yes…  absolutely… I just need 5 more minutes. </p>
+                                    <p class='script-action '> Beat. Al starts to drift off. Distant zombie SFX. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> FIVE. MINUTES? Oh wow what a wonderful compromise. You get 5 minutes, I get betrayal. </p>
+                                    <p class='script-char '> Al (half-sitting up) </p>
+                                    <p class='script-dial align-self-center'> What’s THAT supposed to mean?? </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> NOTHING. It’s FINE. I’m sure everything will change in 5 minutes. You’ll suddenly feel super well rested and ready to get up.  </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> I will. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> You know this is exactly like when you said “I’ll get to work early tomorrow” and then you DIDN’T. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> (Gasp) YOU SAID THAT WAS FINE. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> WELL IT WASN’T. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> You said it was HEALTHY. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> WELL I LIED. Do you think the zombies will wait 5 more minutes because it’s “HEALTHY”? </p>
+                                    <p class='script-action '> Distant zombie SFX. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> Yes. Definitely. They’re PATIENT. Unlike SOMEONE. </p>
+                                    <p class='script-action '> Beat. Nearby zombie SFX. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> This isn’t about the zombies Al. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> It’s not? </p>
+                                    <p class='script-action '> Zombie noises stop. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> NO. It’s… you’re embarrassing me, okay. It’s embarrassing. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> What? </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> I have one job Al. And I’m failing. Do you know how that makes me feel? </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> Uhhh. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> Maybe I should go become an alarm for a zombie, since they have no problem waking up early. Maybe then I’d be APPRECIATED. </p>
+                                    <p class='script-action '> Loud zombie SFX. Sound of door/wall being kicked. </p>
+                                    <p class='script-char '> Al (looking up) </p>
+                                    <p class='script-dial align-self-center'> I... </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> LOOK AT THEM. It’s 7 AM and they’re already kicking doors, and losing limbs. Don’t YOU want to be like that Al? </p>
+                                    <p class='script-action '> Loud zombie SFX continuously. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> No? </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> They’re so responsible and driven. Their alarms must be SO PROUD.  </p>
+                                    <p class='script-char '> Al (looking up) </p>
+                                    <p class='script-dial align-self-center'> I don’t think they have- </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> I JUST… I JUST… WISH YOU WERE A ZOMBIE. </p>
+                                    <p class='script-action '> Beat. Intrigued zombie SFX. </p>
+                                    <p class='script-char '> Al (half-sitting up) </p>
+                                    <p class='script-dial align-self-center'> You do? </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> I do. I’m sorry. </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> Wow. </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-char '> Al (fully sitting up) </p>
+                                    <p class='script-dial align-self-center'> Well, then maybe I should go out there and let them turn me into one. </p>
+                                    <p class='script-action '> Excited zombie SFX. </p>
+                                    <p class='script-char '> Alarm  </p>
+                                    <p class='script-dial align-self-center'> AL NO! WAIT! I DIDN’T MEAN THAT! I WAS JUST ANGRY! </p>
+                                    <p class='script-char '> Al </p>
+                                    <p class='script-dial align-self-center'> No it’s okay... I owe you this much. </p>
+                                    <p class='script-char '> Alarm </p>
+                                    <p class='script-dial align-self-center'> Really? </p>
+                                    <p class='script-char '> Al (laying back down) </p>
+                                    <p class='script-dial align-self-center'> Yeah... but just give me 5 minutes. </p>
+                                    <p class='script-action '> Grunt zombie SFX. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='LETTER_BY_LETTER'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Freda dials the phone and puts it up to her ear. Albert picks up the call. </p>
+                                    <p class='script-char '> Albert </p>
+                                    <p class='script-dial align-self-center'> Hello, thanks for calling Generic Banking Solutions, I’d be happy to help you with your problem today, no matter how long it takes. That’s our corporate guarantee! Can I start with your first name? </p>
+                                    <p class='script-char '> Freda </p>
+                                    <p class='script-dial align-self-center'> Hi there, yes, it’s Freda. </p>
+                                    <p class='script-char '> Albert </p>
+                                    <p class='script-dial align-self-center'> Got it, (to self, typing) F-R-E- </p>
+                                    <p class='script-char '> Freda </p>
+                                    <p class='script-dial align-self-center'> That’s F as in: </p>
+                                    <p class='script-dial-ital align-self-center'> Fergalicious definition make them boys go crazy they always claim they know me, comin' to me, callin' me Stacy. </p>
+                                    <p class='script-dial align-self-center'> R, as in: </p>
+                                    <p class='script-dial-ital align-self-center'> R-E-S-P-E-C-T, find out what it means to me, R-E-S-P-E-C-T, take care, TCB. </p>
+                                    <p class='script-dial align-self-center'> E, as in: </p>
+                                    <p class='script-dial-ital align-self-center'> Everybody's jokin' now, the clocks run out, times up, over, blaow, snap back to reality, ope there goes gravity.  </p>
+                                    <p class='script-dial align-self-center'> Sir, do I still have you? </p>
+                                    <p class='script-char '> Albert </p>
+                                    <p class='script-dial align-self-center'> Uh, yes? </p>
+                                    <p class='script-char '> Freda </p>
+                                    <p class='script-dial align-self-center'> Okay, great. So that's D as in:  </p>
+                                    <p class='script-dial-ital align-self-center'> Don't be mad once you see that he want it, if you liked it then you shoulda put a ring on it. Oh, oh, oh. </p>
+                                    <p class='script-dial align-self-center'> A, as in: </p>
+                                    <p class='script-dial-ital align-self-center'> All in this together, once we know, that we are, we're all stars and we see that, we're all in this together- </p>
+                                    <p class='script-char '> Albert </p>
+                                    <p class='script-dial align-self-center'> -Thank you Freda. Ahem. If I could now please get your last name…? </p>
+                                    <p class='script-char '> Freda </p>
+                                    <p class='script-dial align-self-center'> Absolutely! It’s Richardson-Williams. </p>
+                                    <p class='script-action '> Albert sighs. Cue montage of Freda jumping letter to letter, singing the songs associated with each one. </p>
+                                    <p class='script-dial align-self-center'> That's R as in: </p>
+                                    <p class='script-dial-ital align-self-center'> Raining men! Hallelujah! It's raining men! Amen!... </p>
+                                    <p class='script-action '> Cut frame: Albert sipping water, looking annoyed. </p>
+                                    <p class='script-dial-ital align-self-center'> Mama, just killed a man. Put a gun against his head. Pulled the trigger now he’s dead... </p>
+                                    <p class='script-action '> Cut frame: Albert taking out his lunch, ready to eat. </p>
+                                    <p class='script-dial-ital align-self-center'> We could've had it allllll, rolling in the deep… </p>
+                                    <p class='script-action '> Cut frame: Albert finished his lunch. </p>
+                                    <p class='script-dial-ital align-self-center'> Oops I did it again I played with your heart, got lost in the game, oh baby baby… </p>
+                                    <p class='script-action '> Cut frame: Albert’s tie is loosened, top buttons undone. He pushes some furniture across the room. </p>
+                                    <p class='script-dial-ital align-self-center'> But I can’t help falling in love with you… </p>
+                                    <p class='script-action '> Cut frame: Albert folding laundry. </p>
+                                    <p class='script-dial-ital align-self-center'> I don’t want a lot for Christmas, there is just one thing I need... </p>
+                                    <p class='script-action '> Cut frame: Albert snuggled in a blanket, reading a book. </p>
+                                    <p class='script-dial-ital align-self-center'> Don’t stop believing, Hold on to that feelin'. Streetlights, people... </p>
+                                    <p class='script-action '> Cut frame: Albert asleep. </p>
+                                    <p class='script-dial align-self-center'> And finally, S, as in: </p>
+                                    <p class='script-dial-ital align-self-center'> Somebody once told me the world is gonna roll me, I ain't the sharpest tool in the shed... </p>
+                                    <p class='script-action '> Cut frame: Albert back in his original attire and position, shirt on and buttoned with tie tightened. </p>
+                                    <p class='script-char '> Albert </p>
+                                    <p class='script-dial align-self-center'> Thank you, Freda. I just need to authenticate you with one security question. Would you like to provide your elementary school name, town you were born in, or mother’s maiden name- </p>
+                                    <p class='script-char '> Freda </p>
+                                    <p class='script-dial align-self-center'> Mother’s maiden name! It’s Gabberflapwoodworkenchester. </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-dial align-self-center'> Do you need me to spell that out? </p>
+                                    <p class='script-action '> Albert braces himself. </p>
+                                    <p class='script-char '> Albert </p>
+                                    <p class='script-dial align-self-center'> No! I got it...  </p>
+                                    <p class='script-action '> Albert very unconfidently begins to type slowly. </p>
+                                    <p class='script-slug '> FADE OUT. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='BUBBLE_COURT'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Waiter looks down at Clara. </p>
+                                    <p class='script-char '> Waiter </p>
+                                    <p class='script-dial align-self-center'> And will that be sparkling or still? </p>
+                                    <p class='script-char '> Clara </p>
+                                    <p class='script-dial align-self-center'> Uhhhhhhh- </p>
+                                    <p class='script-action '> Cut away / zoom into Clara’s brain. Frame on Judge. </p>
+                                    <p class='script-char '> Judge </p>
+                                    <p class='script-dial align-self-center'> Calling the case of Clara V. Clara in the matter of sparkling versus still. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> Thank you, Your Honour. Members of the court, the data shows that air is free. </p>
+                                    <p class='script-action '> “Air = Free” graphic appears. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> Furthermore, water is free. </p>
+                                    <p class='script-action '> “Water = (sometimes) Free” graphic appears. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> But air inside water is $9.99 before tax? </p>
+                                    <p class='script-action '> “Air + Water = $$$ ?” graphic appears. </p>
+                                    <p class='script-char '> Clara (Sparkling) </p>
+                                    <p class='script-dial align-self-center'> Well you can’t put a price on delicious. </p>
+                                    <p class='script-action '> Clara (Sparkling) smacks her lips. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> If by delicious you mean “really bad,” then, yes- </p>
+                                    <p class='script-action '> Clara (Sparkling) loudly opens a Perrier. </p>
+                                    <p class='script-char '> Clara (Sparkling) </p>
+                                    <p class='script-dial align-self-center'> Oopx, excuse me! </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> No, I don’t think I will excuse you. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-action '> Image of man clutching his heart appears. </p>
+                                    <p class='script-dial align-self-center'> According to this research, sparkling water leads to heartburn. As shown in this figure, that does not look fun </p>
+                                    <p class='script-char '> Clara (Sparkling) </p>
+                                    <p class='script-dial align-self-center'> Your Honour, I believe Clara meant to say heart YEARN for the sweet sweet taste of sparkles. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> Objection, that doesn’t even make sense. </p>
+                                    <p class='script-char '> Judge </p>
+                                    <p class='script-dial align-self-center'> Clara, Clara, be civil with yourself. </p>
+                                    <p class='script-char '> Clara (Sparkling) </p>
+                                    <p class='script-dial align-self-center'> Thank you, Your Honour. Now I’d like to call on my expert witness: our older sister – a real Millenial – with a defense of something I can probably imagine her saying. </p>
+                                    <p class='script-char '> Millennial (sobbing) </p>
+                                    <p class='script-dial align-self-center'> I used to drink sparkling water every day. 20 cans a week. And now? Now I can’t afford a mortgage. But you know what? IT WAS WORTH IT. </p>
+                                    <p class='script-action '> Millennial angrily sips a Perrier. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> Irrelevant witness statement, Your Honour. Everyone knows our sister is a bitch. </p>
+                                    <p class='script-char '> Millennial </p>
+                                    <p class='script-dial align-self-center'> Oh REALLY, Clara? REALLLLLLY? I’LL FUCKING KILL YO- </p>
+                                    <p class='script-char '> Judge </p>
+                                    <p class='script-dial align-self-center'> Millennial, you will be held in contempt of this court! Security, get her out! </p>
+                                    <p class='script-action '> Millennial’s disttant shouting heard in the back. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> I’d like to call MY witness: what I imagine our dad, a Boomer, would say. </p>
+                                    <p class='script-char '> Boomer </p>
+                                    <p class='script-dial align-self-center'> I hate sparkling water. What am I, a European? I like my water like I liked my coke from back in the day: soft and still. </p>
+                                    <p class='script-action '> A fully green pie chart appears on the screen. </p>
+                                    <p class='script-char '> Clara (Sparkling) </p>
+                                    <p class='script-dial align-self-center'> Research has found that this pie chart is 100% a circle, and all bubbles are 100% circles. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> Your Honour, where is this going? </p>
+                                    <p class='script-char '> Judge </p>
+                                    <p class='script-dial align-self-center'> I honestly don’t know. </p>
+                                    <p class='script-action '> Circle graphic poofs off screen. </p>
+                                    <p class='script-char '> Clara (Sparkling) </p>
+                                    <p class='script-dial align-self-center'> Ugh, face it, Clara, everyone loves the feeling of their water gently spanking their taste buds. </p>
+                                    <p class='script-char '> Clara (Still) </p>
+                                    <p class='script-dial align-self-center'> No you give it up, CLAIR. No one likes spicy, overpriced, FAKE WATER! </p>
+                                    <p class='script-char '> Judge </p>
+                                    <p class='script-dial align-self-center'> Thank you Clara, Clara. (Gavel bang). This court finds the clear choice to be- </p>
+                                    <p class='script-action '> Cut to Clara (Sparkling) winking at judge. Cut back to Clara answering the Waiter’s question. </p>
+                                    <p class='script-char '> Clara </p>
+                                    <p class='script-dial align-self-center'> Neither! I’ll have, uhh, uhh uhh... SODA. I’ll have a soda, please. </p>
+                                    <p class='script-char '> Waiter </p>
+                                    <p class='script-dial align-self-center'> Alright. Will that be Coke or Pepsi? </p>
+                                    <p class='script-action '> Cut away / zoom into Clara’s brain. Frame on Judge. </p>
+                                    <p class='script-char '> Judge </p>
+                                    <p class='script-dial align-self-center'> Jeez, long shift today. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='MOOOOOM'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Karen is studying. </p>
+                                    <p class='script-char '> Mom (V.O.) </p>
+                                    <p class='script-dial align-self-center'> Karen!? Are you up there? </p>
+                                    <p class='script-char '> Karen </p>
+                                    <p class='script-dial align-self-center'> Yeah? </p>
+                                    <p class='script-action '> No response. Beat. </p>
+                                    <p class='script-char '> Karen (cont.) </p>
+                                    <p class='script-dial align-self-center'> Mom? </p>
+                                    <p class='script-char '> Mom (V.O.) </p>
+                                    <p class='script-dial align-self-center'> KAAAARENNNNN???? Can you hear me? </p>
+                                    <p class='script-char '> Karen </p>
+                                    <p class='script-dial align-self-center'> YEAH! WHAT? </p>
+                                    <p class='script-action '> No response. Beat. </p>
+                                    <p class='script-char '> Mom (V.O.) </p>
+                                    <p class='script-dial align-self-center'> Karen? Are you up there? I need you down here! There is an incredibly important thing I need to ask you in person and it is impossible for me to yell up the stairs, and it’s also impossible for me to walk upstairs because it’s impossible. KAAAARRENNNNNNNNNNNNNN?! </p>
+                                    <p class='script-char '> Karen </p>
+                                    <p class='script-dial align-self-center'> MOOOOOM. WHAT? I’M STUDYING! </p>
+                                    <p class='script-action '> No response. Beat. </p>
+                                    <p class='script-char '> Karen (cont.) </p>
+                                    <p class='script-dial align-self-center'> WHAT! </p>
+                                    <p class='script-action '> No response. Beat. </p>
+                                    <p class='script-char '> Karen (cont.) </p>
+                                    <p class='script-dial align-self-center'> MOOOOOM WHAT? </p>
+                                    <p class='script-action '> No response. Beat. </p>
+                                    <p class='script-char '> Karen (cont.) </p>
+                                    <p class='script-dial align-self-center'> Ugggghhhhhhh. I’m coming up there. </p>
+                                    <p class='script-action '> Karen drags herself up out of the chair. Karen exits the frame. Loud footsteps can be heard walking through the house, down the stairs. </p>
+                                    <p class='script-char '> Mom (V.O.) </p>
+                                    <p class='script-dial align-self-center'> Oh! Nevermind, Karen! I found them! I found my glasses. You’ll never believe it, they were on my head! Nevermind honey you can go back upstairs. </p>
+                                    <p class='script-action '> Beat. Footsteps running back up the stairs and down the hallway. Karen enters the frame again, sits back down. Karen is visibly annoyed but gets back to work. </p>
+                                    <p class='script-char '> Dad (V.O.) </p>
+                                    <p class='script-dial align-self-center'> Kaaaaaren? </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-char '> Karen </p>
+                                    <p class='script-dial align-self-center'> Ughhhhhhhhhhhhhhh. </p>
+                                    <p class='script-action '> Karen throws her study papers into the air angrily. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='JUST_A_TREE'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Open on a chair off to the right-hand side. Enter Tree. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> Just sit here? </p>
+                                    <p class='script-action '> Tree sits down. Bleep SFX. New shot of Tree in chair. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> You know, a lot of people ask me “Why did you take the part of Tree #2?” </p>
+                                    <p class='script-action '> Cut to Tree standing beside a real tree. </p>
+                                    <p class='script-char '> Tree (VO) </p>
+                                    <p class='script-dial align-self-center'> And to that I say... What is acting without challenge? </p>
+                                    <p class='script-action '> Cut to Tree back in the chair. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> They say... y’know, “Trees don’t move” or “Trees don’t talk” or “Trees don’t contribute to the plot”. </p>
+                                    <p class='script-action '> Cut to Tree shaking hands with a tree. </p>
+                                    <p class='script-char '> Tree (VO) </p>
+                                    <p class='script-dial align-self-center'> And that’s where they’re wrong. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> How are they wrong? </p>
+                                    <p class='script-action '> Cut to Tree back in the chair. Beat. Tree looks off to the side at the interviewer. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> I’m not comfortable answering that. </p>
+                                    <p class='script-action '> Cut to Tree talking to a tree and laughing. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> You know, when I was five years old I... saw trees sometimes. And I thought – what is that? And now... I know. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> You do? </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> Yeah, it’s like – every day we get to experience what it’s like to be a person. But how often- </p>
+                                    <p class='script-action '> Cut to Tree back in the chair. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> How often do you get to walk a mile in the shoes of a tree? </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> Well... not walk... you get it. </p>
+                                    <p class='script-action '> Cut to Tree smelling a leaf or something. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> They may not express emotion, but they still FEEL, y’know? You could say “hey, that tree is ugly!” and sure, nothing would happen... </p>
+                                    <p class='script-action '> Cut to Tree back in the chair. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> Yeah, nothing would happen. But that doesn’t mean that nothing was felt on the inside. We all have insides. </p>
+                                    <p class='script-action '> Cut to Tree lying on the ground, they have just been cut down and are performing a dramatic death sequence.  </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> Fewer lines? Yes. But you know the number of lines doesn’t actually matter. Mimes? They don’t have lines. </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-dial align-self-center'> People don’t talk about that. </p>
+                                    <p class='script-action '> Cut to Tree back in the chair. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> A performance? Wow I wasn’t expecting this. Yeah I can do one, uh... </p>
+                                    <p class='script-action '> Tree sits still in the chair, staring blankly. Long, extended beat. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> Wow, well thanks for coming in today. </p>
+                                    <p class='script-char '> Tree </p>
+                                    <p class='script-dial align-self-center'> Of course, this has been a real tree..... t. </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> Yeah. Ha ha. </p>
+                                    <p class='script-action '> Long, uncomfortable beat. </p>
+                                    <p class='script-action '> Cut to Tree amongst many other threes (in the forest). Slow zoom. </p>
+                                    <p class='script-char '> Interviewer (VO) </p>
+                                    <p class='script-dial align-self-center'> After our interview, Thomas ventured back into the forest, continuing to perfect his art in preparation for next year’s production of Mamma Mia. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                                  <div class='sketch-script-text d-flex flex-column text-center d-none' id='BUSINESS_CARDS'>
+                                    <p class='script-slug '> Fade in. </p>
+                                    <p class='script-action '> Open frame on Interviewer. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> You must be applicant four hundred and forty TWO! SO 442, I hear you want to be an engineering intern?! </p>
+                                    <p class='script-action '> Switch to Applicant. </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> I do. It’s my destiny.  </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> Ha! Destiny! We’ll see about that. I summon my supervisor, Terry! </p>
+                                    <p class='script-action '> Switch to Applicant. Applicant is shocked. Switch to Supervisor. </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> Hi.... uh.... don’t mind me- </p>
+                                    <p class='script-action '> Switch to Supervisor. Supervisor is surprised. Switch to Applicant. </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> I summon my friend Steve! </p>
+                                    <p class='script-char '> Steve </p>
+                                    <p class='script-dial align-self-center'> Woah how did I get here? </p>
+                                    <p class='script-action '> Switch to Supervisor, shocked. Switch to Steve, shocked. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> FINE! *Simple questions about the company attack!* Why are you interested in this position? </p>
+                                    <p class='script-char '> Steve </p>
+                                    <p class='script-dial align-self-center'> It’s super effective! </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> You won’t defeat me with that! Goooo rambling about things I read from the company website last night! </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> (Gasp) The applicant did the research! </p>
+                                    <p class='script-char '> I can’t watch! </p>
+                                    <p class='script-dial align-self-center'> Nerd! Well I bet you didn’t see this one coming! Tell me about yourself! </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> Nooooooo! *Lie about knoiwng how to use Excel!* - I have a lot of experience using Excel. </p>
+                                    <p class='script-action '> Steve gasps. Supervisor gasps. </p>
+                                    <p class='script-char '> Steve </p>
+                                    <p class='script-dial align-self-center'> So impressive! </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> I assume you think you’re doing well... HA, just give up! </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> This does not look good. </p>
+                                    <p class='script-char '> Steve </p>
+                                    <p class='script-dial align-self-center'> Clearly the interviewer has completely overwhelmed the applicant with basic questions. </p>
+                                    <p class='script-action '> Beat. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> NOW. I’ll ask... a PROGRAMMING QUESTION! </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> Ahhhhh I’ll counter by spending too much time discussing the problem to even get to code anything! </p>
+                                    <p class='script-action '> Supervisor gasps. </p>
+                                    <p class='script-char '> Steve </p>
+                                    <p class='script-dial align-self-center'> It... worked!! </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> Your flashy tricks don’t fool me, worm! What is your greatest weakness? </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> I’m too much of a perfectionist! </p>
+                                    <p class='script-action '> Splitscreen on Interviewer, Supervisor, and Steve, all shocked. </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> The perfect response! </p>
+                                    <p class='script-action '> Interviewer looks more nervous, wipes palms and glances at the resume, then starts laughing maniacally. </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> What’s so funny? </p>
+                                    <p class='script-action '> Interviewer keeps laughing. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> So close, four four two. You almost had me. But you failed to notice something about your relevant experience. Or should I say... your Relevat Experice! </p>
+                                    <p class='script-action '> Interviewer taps resume. Applicant is SHOCKED. </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> A typo! How could it be? The applicant’s resume says they’re detail-oriented! </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> It’s all over! Now get out of my sight! </p>
+                                    <p class='script-action '> Intermittent shots between Interviewer’s evil laughter, Supervisor taking notes, and Applicant frantically looking around. </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> Wait! I identify that the company website used the wrong “your” in its “About Us” section! </p>
+                                    <p class='script-char '> Steve </p>
+                                    <p class='script-dial align-self-center'> The applicant has counter attacked with another typo! </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> Guess doing company research does pay off... </p>
+                                    <p class='script-action '> Interviewer looks around desparately, sweating and nervous.  </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> What... no. That’s preposterous... slander! </p>
+                                    <p class='script-char '> Applicant </p>
+                                    <p class='script-dial align-self-center'> FINALLY! I give a perfect firm handshake. </p>
+                                    <p class='script-char '> Interviewer </p>
+                                    <p class='script-dial align-self-center'> Nooooooo! Foiled again! I guess I need to hire you nooow!!! </p>
+                                    <p class='script-char '> Supervisor </p>
+                                    <p class='script-dial align-self-center'> Applicant 442, welcome to Microsoft. </p>
+                                    <p class='script-slug '> Fade out. </p>
+                                  </div>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+
+                    <!-- LYRICS -->
+                    <section id="lyrics" class='container mb-4'>
+                        <h1 class='h1 text-center sub-font'> LYRICS </h1>
+                        <hr class='people-hr border-dark mb-4' />
+                        <div class='row goodies-box m-auto mb-4'>
+                        <div class='card text-center shadow script g-0 m-auto'>
+                            <!-- nav -->
+                            <div id='song-box' class='card-header p-0'>
+                                <div class='btn-group w-100' role='group' aria-label='Song lyric navigation'>
+                                    <a role='button' class='btn w-10 text-wrap fs-xs-4 fs-sm-3 pb-0' onclick="switchSong('prev', '');" aria-label='Previous song'>
+                                        <span aria-hidden='true'>&laquo;</span>
+                                    </a>
+                                    <div class='btn-group w-80' role='group'>
+                                        <button id='song-dropdown' type='button' class='btn dropdown-toggle border-start border-end text-wrap fs-xs-4 fs-sm-3 pb-0' data-bs-toggle="dropdown" aria-expanded='false' aria-label='Pick a song'>A SKULE NITE (FROM YOUR COUCH)</button>
+                                        <ul class='dropdown-menu w-100' aria-labelledby='song-dropdown'>
+                                            <li><a class='dropdown-item' onclick="switchSong('A_SKULE_NITE_FROM_YOUR_COUCH', 'A SKULE NITE (FROM YOUR COUCH)');">A SKULE NITE (FROM YOUR COUCH)</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSong('LIFE_IN_QUARANTINE', 'LIFE IN QUARANTINE');">LIFE IN QUARANTINE</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSong('INVESTIGATION_489:_EIGHTEEN_PI_SQUARED', 'INVESTIGATION 489: EIGHTEEN PI SQUARED');">INVESTIGATION 489: EIGHTEEN PI SQUARED</a></li>
+                                            <li><a class='dropdown-item' onclick="switchSong('THATS_ENGINEERING_BABY', 'THAT’S ENGINEERING, BABY!');">THAT’S ENGINEERING, BABY!</a></li>
+                                        </ul>
+                                    </div>
+                                    <a role='button' class='btn w-10 text-wrap fs-xs-4 fs-sm-3 pb-0' onclick="switchSong('next', '');" aria-label='Next song'>
+                                        <span aria-hidden='true'>&raquo;</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                            
+                            <!-- The Lyrics Themselves -->
+                            <div class='card-body'>
+                                <div class='song-script-text d-flex flex-column text-center ' id='A_SKULE_NITE_FROM_YOUR_COUCH'>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Though a lot has changed since 100 years ago,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I know there’s one thing that has stayed the same. </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Can you guess?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Gosh-</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I don’t think so!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>What could it be?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Skule Nite, is filled with laughter</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Skule Nite, has silly banter</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Skule Nite makes us feel whole</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>And Skule Nite is a place that’s welcome to all!  </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>And whether 100 years ago, on the first opening night, or right here on your computer, while we battle a viral plight - Skule Nite is a home for us all to enjoy.  </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>You can watch,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>From your bed, from your couch, with your wife!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Woohoo!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>There’s no need to get out of your seat, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Unless you need to go pee!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite, is for you,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>To sit back and relax as you view.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Now you could pause, rewind, go back, or just hit play.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>And you could skip a sketch, but that would be a dismay!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Just slip into some PJs and this show’s underway!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Welcome to</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Did I mention it’s our hundredth year?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>My goodness, yes, I think they already know! </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But this is a special show!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>What a year!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>What a time,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>What a place-</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I need a beer.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>If you close your eyes then you can hear all of their applause!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I think you’re right, I hear it now, they're roaring in awe!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>You guys, hello, the show’s online, there’s nothing to hear!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>We’re online!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This part here, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This would be</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A dance break if we weren’t on TV!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Take it away band!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(Instrumental Break)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Welcome to this Skule Nite,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Take a seat, dim the lights, hang on tight.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>The hundredth year is here and it is like no other!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A fun show we made for you to laugh and discover!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>We take it you’re ready for a show filled with wonder!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This Skule Nite!</p>
+                                  </div>
+                                  <div class='song-script-text d-flex flex-column text-center d-none' id='LIFE_IN_QUARANTINE'>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ll feel fine</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>If I keep on baking</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I would try,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But I deserve a break</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Slow wi-fi</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is so frustrating</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Parents try</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>To give me a headache</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is torture, this is hell,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is life in quarantine</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Stuck inside this prison cell,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is life in quarantine</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Stay calm! There’s no need to-</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Buy everything.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Grocery shop.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Stock up on yeast. </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Goddamn it!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Toilet paper and alcohol</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>All the shelves are clear!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>What to do now?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ve got enough for the year</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(This is life in quarantine)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(This is life in quarantine)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Every day</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I lose motivation</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Go away</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Please go away!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is inhumane</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’m okay,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Thanks to meditation</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>No more plans,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>So I can’t complain</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ve adjusted, this is fine</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>We’ll be out by Christmastime</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ve accepted, this new life</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is life in quarantine</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>3 more months.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A second wave</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A second wave</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A second wave</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Fuck this shit!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I can’t take 3 more months of this</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’m out of tiktok trends</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Someone tell me </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>When will this Covid shit end?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(This is life in quarantine)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(This is life in quarantine)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Will it end?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Will it end?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Will it end?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Oh sweet god!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is torture, this is hell,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This is life in quarantine </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Yes it is!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Oh yes it is!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(This life in quarantine</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This life in quarantine,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This life in quarantine,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This life in quarantine,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This life in quarantine,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This life in quarantine)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'> </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Yeah!</p>
+                                  </div>
+                                  <div class='song-script-text d-flex flex-column text-center d-none' id='INVESTIGATION_489:_EIGHTEEN_PI_SQUARED'>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Do you see that student right there,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that, 18 pi squared?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ve never seen her in this section, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That is awfully suspicious.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Look right here I’ve got a theory, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She paid the Prof and all the TAs.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Went to all their office hours,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Slid them 20s,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Money showers!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’m telling you she bribed them,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Telling you she bribed them,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Paid off all of the TAs!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>What about her notebook</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Right here in her notebook,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She has got the full proof!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Was it magic? Wolframalpha? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>There’s no way she derived it </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Did the full proof, got the answer, no way! </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Look right here I’ve got a new clue, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Her calculator - not faculty approved!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ve got the dean’s number, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I’ll call him right now,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Motherfu- (Hoo!)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She must be a —</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She must be a —</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A real cheater!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Maybe it was all in her head,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>The mental math (grunt)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She’s a genius! </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>I hacked into the backend</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Found her transcript-</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She’s an INDY???</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She’s a fuckin’ INDY</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She’s a fuckin’ INDY</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Do they even learn math?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Maybe she’s a genius?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Maybe she’s a genius?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Or she bribed the TAs! </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer? (I don’t know!)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Was it magic? Wolframalpha? (Lord I don’t!)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>There’s no way she derived it </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Did the full proof, (Oh there’s got to be a reason!)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Got the answer, no way! </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She could have travelled from the future (Unlikely!)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>The answer could save the human race - oh, I’m sure!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Yeah she’s acting all suspicious,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But I still have </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>one question.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>How’d she get that answer?</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She must be a-</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>She must be a-</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>A real cheater!</p>
+                                  </div>
+                                  <div class='song-script-text d-flex flex-column text-center d-none' id='THATS_ENGINEERING_BABY'>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>You’re gonna lose some sleep this year.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But don’t be scared, you’ll make it there.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>You’re gonna lose some sleep this year.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But soon you’ll have a great career.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(Problem Sets)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s Engineering Baby, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Trust me you’re gonna make it.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(Group Projects)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>This lab took me all night and I got a 38.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>No one can solve this truss, not even my TA.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Maybe when I finish this midterm I’ll take a break to sleep.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But I have 5 midterms next week.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Your labs will keep you up all night.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Those midterms do put up a fight.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(All Nighters)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s Engineering Baby, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Trust me you’re gonna make it.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(ESP)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>And I thought it would get better on PEY, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But I have no real skills because I’m an EngSci</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Maybe all those labs I did in second year were just a waste</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>At least I make a big salary</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s Engineering Baby, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Your PEY might be a drag</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s Engineering Baby, </p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But at least you’ll have lots of cash</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(PEY)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering, baby</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>(Then Capstone)</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering, baby</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Iron ring, Iron ring</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Doo do, S-K-U-L-EEEEE</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>And you’ve got a degree!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby,</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>Stay up all night for a passing grade</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering baby</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>But we’re gonna change the world one day!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>We’ll make it!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering, baby</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering.</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>We’ll make it!</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>That’s engineering, baby</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>AaaahhhhAHHHHHHHHH</p>
+                                    <p class='mb-1 align-self-center' style='width: 60%'>AHHHHHHAAAAAAAHHHHHHHHHHHH</p>
+                                  </div>
+                            </div>
+                        </div>
+                        </div>
+                    </section> 
+
+                </section>
+            </div>
+        </section>
+
+        <footer class='footer mt-4 py-2 bg-danger'>
+            <div class='container d-flex justify-content-between'>
+                <div class='me-auto'>
+                    <a class='me-3 fs-3' href='https://www.instagram.com/skulenite' target='_blank'><i class="bi bi-instagram"></i></a>
+                    <a class='me-3 fs-3' href='https://www.facebook.com/skulenite' target='_blank'><i class="bi bi-facebook"></i></a>
+                    <a class='me-3 fs-3' href='https://www.twitter.com/skulenite' target='_blank'><i class="bi bi-twitter"></i></a>
+                    <a class='me-3 fs-3' href='https://www.youtube.com/skulenite' target='_blank'><i class="bi bi-youtube"></i></a>
+                    <a class='me-3 fs-3' href='mailto:skulenite@skule.ca' target='_blank'><i class="bi bi-envelope"></i></a>
+                </div>
+                <div class='me-5 align-middle my-auto'>
+                    <span class='text-muted align-middle fs-6'>Website designed by Gabe Sher, from home 💜</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+

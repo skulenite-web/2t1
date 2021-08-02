@@ -1,0 +1,557 @@
+<html>
+    <head>
+        <title>SkuleNite 2T1</title>
+
+        <!-- Styling + Bootstrap -->
+        <link rel='stylesheet' href='bootstrap/bootstrap.min.css'>
+        <link rel='stylesheet' href='css/main.css'>
+        <script src='bootstrap/bootstrap.bundle.min.js'></script>
+        
+        <!-- Custom JS -->
+        <script src='js/curtains.js' type='text/javascript'></script>
+        <script src='js/fetch-submit.js' type='text/javascript'></script>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="96x96" href='img/favicon-96x96.png'>
+        <link rel="icon" type="image/png" sizes="32x32" href='img/favicon-32x32.png'>
+        <link rel="icon" type="image/png" sizes="16x16" href='img/favicon-16x16.png'>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+        <link href="https://use.typekit.net/gbb4rnm.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    </head>
+    <body class="bg-info text-dark">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-info shadow" id="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img id="navlogo_img_watchpage" src='img/logo_nav.png'>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navToggle" aria-controls="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navToggle">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 sub-font">
+                <li class="nav-item">
+                  <a class="nav-link active fs-2" aria-current="page" href="index.html">Watch</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="programme.html">Programme</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="goodies.html">Goodies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="history.html">History</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="donors.html">Donors</a>
+                </li>
+              </ul>
+              <a id='curtain-toggle' class='d-none d-md-block btn btn btn-danger float-end' onclick='toggleCurtains()'>Hide Curtains</a>
+            </div>
+          </div>
+        </nav>
+
+        <section>
+            <div class="main">
+                <div class='d-none d-lg-block curtains px-0 mx-0 position-absolute overflow-visible' style='top:106px;'>
+                    <!-- Curtains - banner -->
+                    <div class='curtain-top position-absolute border-none'>
+                        <img id='curtain-img' src="img/curtains-top.png" width=100%></img>
+                    </div>
+        
+                    <!-- Curtains - rusts (scroll-past) -->
+                    <!--<div class='curtains-rusts position-absolute'></div>-->
+                </div>
+      
+                <div id='video' class='iframe-container'>
+                    <iframe src="https://www.youtube.com/embed/GNPgH-SJO7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+      
+                <div class='container mt-4'>
+                    <div class='row'>
+                        <div class='d-inline-flex justify-content-center my-3 mt-5'>
+                            <a class='btn btn-primary btn-lg text-center' href='assets/programme.pdf' target='_blank'>DOWNLOAD THE PROGRAMME</a>
+                        </div>
+                    </div>
+                    
+                    <h1 class='h1 mt-2 sub-font text-center pt-3'>
+                        MESSAGE BOARD
+                    </h1>
+                    <hr class='border-dark mb-3'>
+                    <div class='container g-3'>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Joe Fuda (ELEC 8T8)</span><span class='float-end fs-6 fst-italic text-muted'>April 18 at 10:47</span>
+                          <p class='fs-6'>Awesome job everyone! Props to the band! Loved the intro. song.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Damian (MSE 1T0)</span><span class='float-end fs-6 fst-italic text-muted'>April 18 at 00:24</span>
+                          <p class='fs-6'>Amazing!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Vince Cerullo (Mech 8T3) & Karen Cerullo (ECE 1T8+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 20:08</span>
+                          <p class='fs-6'>Great job everyone! Hilarious show as always - congrats on 100 years!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Chris Peressotti (EngSci 0T1 + PEY (Director 0T7... yeah, it took me a while))</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 17:46</span>
+                          <p class='fs-6'>CRUSHED IT. On its own, is funny and super-entertaining – but put together during a GLOBAL PANDEMIC? I'm astounded.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Cat Glossop</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 13:49</span>
+                          <p class='fs-6'>Great job guys! I died laughing at the tree sketch ahah</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Isaac Glassman (2024)</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 08:55</span>
+                          <p class='fs-6'>I don’t even go to this school but this was amazing!!! And great website </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Josie Cooper (SN1T2-4 Cast)</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 05:28</span>
+                          <p class='fs-6'>Watched it this morning (time zone problems...) what a great transition to the online platform :D
+  I can't imagine how much effort went into the logistics, editing - and that animation number!
+  Still keeping that SN magic alive during pandemic times &lt;3
+  Thank you xoxo</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Lucy Lu (2T0+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 01:42</span>
+                          <p class='fs-6'>So good I watched it twice! Love all the writings and performance! Glad to see the band members too! :) Great job!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>tony (2t3)</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 01:40</span>
+                          <p class='fs-6'>absolute beaut</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Minha (MECH2T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 17 at 00:14</span>
+                          <p class='fs-6'>This was sooo good! Congratulations for rocking Skule Nute 2T1 !!!! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>David McMurtry (6T3 Mech Eng)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 22:43</span>
+                          <p class='fs-6'>I was in Skule Nite for 2 years.....fantastic fun experience. Good memories! Glad to see the tradition lives on. </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Jacqueline Seward</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 22:35</span>
+                          <p class='fs-6'>Great job Mackenzie!!!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Danny Hui (0T7+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 22:15</span>
+                          <p class='fs-6'>Wonderful.  Amazing hustle to make this happen.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Caroline </span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 22:09</span>
+                          <p class='fs-6'>Great job everyone! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Meg Muldoon (ECE1T9)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:46</span>
+                          <p class='fs-6'>Fantastic! Five Stars! Congratulations everyone! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Mike V (ECE1T9)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:45</span>
+                          <p class='fs-6'>CONGRATS TO EVERYONE FOR A GREAT SHOW!!!!1</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Larry breakwell (8t9 (producer 8t7))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:39</span>
+                          <p class='fs-6'>Fantastic production.   You carried on the tradition in the face of huge obstacles and pulled off a wonderful product that everyone can be proud of.  You set a new online standard!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Julie Madsen</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:32</span>
+                          <p class='fs-6'>Well done Maya!!! Assistant Producer 👏🏻👏🏻</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Chris and Stef Moraes (EngSci 0T5)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:27</span>
+                          <p class='fs-6'>Fantastic show!!  Bravo!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Larry Brooks (MECH 8T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:24</span>
+                          <p class='fs-6'>Fantastic!  Wonderful!
+  Most fun ever!
+  Thank you!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Jason Tigas (0T3+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:23</span>
+                          <p class='fs-6'>Great show, hilarious!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Naveen Aggarwal</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:22</span>
+                          <p class='fs-6'>Superb execution! With talent like this, in all facets of art and tech., our future is secure in the hands of these young engineers!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Pranshu Malik (ECE 2T1 + PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:20</span>
+                          <p class='fs-6'>Amazing job!! Loved it :) </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Jacek Mlynarski (1T4)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:18</span>
+                          <p class='fs-6'>Good job!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Louvain Piggott & Rocky Simmons</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:16</span>
+                          <p class='fs-6'>Fantastic show!!!!
+  Congratulations to all
+
+  Louvain & Rocky(6T4,6T5,6T9)</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Noah (ECE2T2)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:16</span>
+                          <p class='fs-6'>Great job everyone! Turned out great even with this year's challenges! GO SKULE!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Matt S. (MIE 0T0+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:15</span>
+                          <p class='fs-6'>Fun show! Well done everyone!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Justin Klodner (9T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:15</span>
+                          <p class='fs-6'>Great job, everyone !
+
+  I thoroughly enjoyed your presentation and your singing !
+
+  If that engineering thing doesn’t work out, you’ve always got Broadway. 
+
+  Good luck in your studies. Cheers, y’all !</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Ho K. Sung</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:14</span>
+                          <p class='fs-6'>Bravo! Congratulations to the entire cast and crew. 100 years from now, your future alums would be proud!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Darlene West</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:13</span>
+                          <p class='fs-6'>Fabulous show!! Thank you </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Sam Orr (0T5 CHEM Enviro (SN 0T5 Cast))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:13</span>
+                          <p class='fs-6'>Thanks for all your hard work putting this together!  I actually laughed out loud!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Henry Shi (EngSci1T1)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:13</span>
+                          <p class='fs-6'>SO GOOOOOD. CONGRATS ON A GREAT SHOW!!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Shruti (MSE 1T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:13</span>
+                          <p class='fs-6'>Woooow I am SO impressed! This is amazing!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Dan Siegal (0T1+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 21:02</span>
+                          <p class='fs-6'>CLAPCLAPCLAPCLAPCLAP WOOOO</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>James Courtney (6T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:48</span>
+                          <p class='fs-6'>Interesting production: amazing use of 2021 Techologies. Congratulations!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>dartlord (2023)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:39</span>
+                          <p class='fs-6'>would give up my darts to watch again</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Joshua Pius (ECE 2T1)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:23</span>
+                          <p class='fs-6'>GOAT level content!!!!!! 👏👏👏👏👏</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Ian C. (Skule Nite 0T0 Musical Director) (0T0+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:22</span>
+                          <p class='fs-6'>100 years?!?! How have we not been canceled yet? A testament to the fact that crass engineering humour never goes out style.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Sadiq Motani (ESP 1T4-1T5 and 1T5-1T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:21</span>
+                          <p class='fs-6'>Go Skule Night :)! Best of luck for tonight's show and kudos to the entire Skule Nite Team</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Vlad Oladejo</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:20</span>
+                          <p class='fs-6'>Great job, everyone! Thanks for putting smiles on our faces!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Sujit Thottarath (0T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:14</span>
+                          <p class='fs-6'>So excited! :)</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>michael cox (1976)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:07</span>
+                          <p class='fs-6'>It's been 45 years since I was a producer of Skule Nite 7T6. It just keeps getting better and better!! And I'm getting younger and younger! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Jan Piekoszewski (8T0 (Director 8T1))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:05</span>
+                          <p class='fs-6'>Break a leg!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Kia</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:05</span>
+                          <p class='fs-6'>Already a historic event!  Congrats on putting a show together and thanks for helping us (try to) keep sane.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>DAFFY DIL</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:02</span>
+                          <p class='fs-6'>LOVE FROM DAFFY CREW!!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Chris Daniel (MECH 9T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:02</span>
+                          <p class='fs-6'>Still singing around the piano with cast members from 9T1!  Eh Lydia, Carson and John???  :-)</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Peter Murphy (1T5+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:02</span>
+                          <p class='fs-6'>I'm glad you guys did this, I'm excited to see the show</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Aryan (2T4)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:01</span>
+                          <p class='fs-6'>60 seconds!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Jim Belaskie (1983)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:00</span>
+                          <p class='fs-6'>Watching with Elizabeth Bradley, T86</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Ibrahim Hassan (EngSci 2T5)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:00</span>
+                          <p class='fs-6'>Hello everyone!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Peter J Boudreau (8T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:00</span>
+                          <p class='fs-6'>Excited to be reconnected with Would Nite!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>James Courtney (6T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 20:00</span>
+                          <p class='fs-6'>New image engineer Skuke Nite 6T3: also performed in SN 6T4</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Theshantha De Silva (2T1+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>Amazing how this team pulled together a show in these times, excited to see the show!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Toby (2021)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>lets get hypeee</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Rohit Zachariah (Indy 1T8+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>SKULE NITE!!!!!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Chloe O  (Mech 2T0+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>I'm so excited to experience the first ever online SN!!! Break a leg!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Kyle Juliao (2T2+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>LET'S GOOO</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Gi Sardinha</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>Go Skule Nite! Toi toi toi from Lisbon, Portugal </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Peter Meiklejohn (CIV 8T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:59</span>
+                          <p class='fs-6'>Everyone have fun and enjoy.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Henry Kneis (Eng Sci 8T5, Skule Nite 8T1 cast member)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:58</span>
+                          <p class='fs-6'>Glad to see I’m not the oldest one here.
+  Break a leg!
+
+  Skule of Science, Skule of Science hooray, hooray, hooray!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Roman Litwinchuk (8T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:58</span>
+                          <p class='fs-6'>Looking forward to the show! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Rhonda Meek</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:58</span>
+                          <p class='fs-6'>Break legs you lovelies!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Karen (Dóniz) Arciszewski (9T4)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:57</span>
+                          <p class='fs-6'>I was in the 9T0 and 9T1 productions :) looking forward to this year</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Annie Simpson</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:57</span>
+                          <p class='fs-6'>Looking forward to it. Way to go on the unstoppable creativity.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Sylvia Schenkenberger (nee Boller) (9T2)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:56</span>
+                          <p class='fs-6'>This technology is sure helpful during this pandemic!  Go Skule Nite!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Christian Chicorli (0T8+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:56</span>
+                          <p class='fs-6'>Break a leg! Looking forward to great audio! 
+  SkuleNite Sound 0T5 - 0T9</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Bruce Thomson (7T8)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:56</span>
+                          <p class='fs-6'>Everyone just comes for the Bnad!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Dave and Litsa Popowich</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:55</span>
+                          <p class='fs-6'>So awesome how the entire team persevered through such trying times to deliver tonight’s release... Great job to all!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Elizabeth de Roode (1T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:55</span>
+                          <p class='fs-6'>Good luck everyone! So excited for the show! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Justin (Mech 1T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:54</span>
+                          <p class='fs-6'>You guys are abso-fucking-lutely incredible for pulling this off. I couldn't be more excited. Break all the legs I'm ready to laugh my ass off. Have a great show!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Laurence Gutcher (9T0)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:53</span>
+                          <p class='fs-6'>Yippee. Skule Nite rocks!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Michael Nettleton (8T2)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:52</span>
+                          <p class='fs-6'>Waiting with as much anticipation as I was backstage for my first show (7T8).  :-)  Wonderful, wonderful programme — and website — beautifully and cleverly designed.  You have *already* exceeded expectations and we have yet to watch a thing!  Break a leg.  Merde. !!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Venkat (INDY2T2)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:51</span>
+                          <p class='fs-6'>LETS GOOO *dababy voice*</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Ashrith Domun (1T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:50</span>
+                          <p class='fs-6'>Props to you all for doing it despite the on-going shitstorm! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Tom Schuck  (Ind 9T0)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:50</span>
+                          <p class='fs-6'>So excited to see the 100th anniversary show!   </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Cemil (Jim) otar (7T5)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:50</span>
+                          <p class='fs-6'>Wow, I am so old.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>David Schenkel (7T5)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:48</span>
+                          <p class='fs-6'>BREAK A LEG!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Martha Mac-roach</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:46</span>
+                          <p class='fs-6'>So excited!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Hasan Alkabeer (CHEM 0T9 + PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:46</span>
+                          <p class='fs-6'>Break a leg all! Well done for keeping the tradition alive during these unprecedented times!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Alex (1T6+PEY (Prod 1T7))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:45</span>
+                          <p class='fs-6'>Congratulations everyone, and break a leg!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Gail Hakala</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:43</span>
+                          <p class='fs-6'>Yeah SKULE!  I was a cast member in the early 80's.  Looking forward to this immensely!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Chris Kwon  (2T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:43</span>
+                          <p class='fs-6'>18 MINUTES LEFT WOOHOO</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Amanda Bell (Indy1T1+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:41</span>
+                          <p class='fs-6'>Break a leg! Congrats Cast, Band, Crew, and everyone else who made Skule Nite 2T1 happen.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Murray Seward</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:40</span>
+                          <p class='fs-6'>Go Mack!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>A supporter </span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:39</span>
+                          <p class='fs-6'>GO CRUSH IT</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Rachel Currie</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:34</span>
+                          <p class='fs-6'>Sending all the virtual heckles and cheers from the Daffydil medicine cast and crew!! We miss your chaotic dress rehearsal energy!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Steven Szeto (0T9 (Producer 0T8/0T9))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:30</span>
+                          <p class='fs-6'>Yay Skule Nite!!!!!!!!!!!!!!!!!!!  Amazing job putting this together!  Super Excited!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Sherry Esfahani (MSE1T5)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:26</span>
+                          <p class='fs-6'>Go Skule Nite! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Flo from Progressive</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:21</span>
+                          <p class='fs-6'>If everything was as well built as this website and show, insurance wouldn't even exist</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Bill CM Tang (2021)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:20</span>
+                          <p class='fs-6'>Hyped for for the LED suite</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Jake Foster (2T0)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:17</span>
+                          <p class='fs-6'>Love being reminded of the Skule community! CONGRATS to everyone on their hard work! About to make my Friday</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Alec McTavish (8T7 (Director, 8T8))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:17</span>
+                          <p class='fs-6'>Looking forward to seeing what magic you have wrought for us. Break a non-essential appendage!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Karma</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:16</span>
+                          <p class='fs-6'>I am so excited for tonight &lt;3 Love from cast of 2T0 :) </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Albert Huynh (1T2T1+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:13</span>
+                          <p class='fs-6'>Excited to see the show, kudos to everyone for getting it together this year</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>William Wang (2T0+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:13</span>
+                          <p class='fs-6'>Skule Nite!!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Hollis Milroy (1T6)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:12</span>
+                          <p class='fs-6'>Yay Skule Nite!  Congrats you folks delivering premium comedy in such challenging times!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Julia Filiplic (Mech 1T8+1)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:08</span>
+                          <p class='fs-6'>Break a leg! As sad as I am to not be able to see this amazing show in person, it is pretty exciting to know that I get to watch with so many people across the globe at the same time. Congrats to all involved! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Darsh Jain (CHEM 2T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 19:07</span>
+                          <p class='fs-6'>Let's go SkuleNite !! Hyped for the event and break a leg !!! </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Matthew Cabral (1T5+PEY)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 18:22</span>
+                          <p class='fs-6'>Soooooo hyyyyype!! Break every leg in your bodies!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Mackenzie Clark (1T9)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 17:43</span>
+                          <p class='fs-6'>Break a leg I love you all &lt;3 </p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Mr. Incredible</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 17:37</span>
+                          <p class='fs-6'>Gabe you are the real Mr. Incredible</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Wayne Levin (8T3)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 17:12</span>
+                          <p class='fs-6'>Break a virtual leg tonight, but wear a mask and stay away from each other!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Lydia Van der Veen (8T8 (Director, 9T3))</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 16:46</span>
+                          <p class='fs-6'>Break a leg, everyone! I know I almost did!!!!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Chirag Variawa (MSE0T9)</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 16:31</span>
+                          <p class='fs-6'>Way to go Skule Nite 2T1 -- so excited for this! GREAT JOB EVERYONE!!1!one
+
+  :) :) 
+
+  --CV.</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Tristan</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 16:39</span>
+                          <p class='fs-6'>Go skule nite!</p>
+                      </div>
+                      <div class='comment-item pb-2'>
+                          <span class='fs-5 fw-bold'>Kristin Philpot</span><span class='float-end fs-6 fst-italic text-muted'>April 16 at 16:25</span>
+                          <p class='fs-6'>Break a leg tonight!</p>
+                      </div>
+
+
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class='footer mt-4 py-2 bg-danger'>
+            <div class='container d-flex justify-content-between'>
+                <div class='me-auto'>
+                    <a class='me-3 fs-3' href='https://www.instagram.com/skulenite' target='_blank'><i class="bi bi-instagram"></i></a>
+                    <a class='me-3 fs-3' href='https://www.facebook.com/skulenite' target='_blank'><i class="bi bi-facebook"></i></a>
+                    <a class='me-3 fs-3' href='https://www.twitter.com/skulenite' target='_blank'><i class="bi bi-twitter"></i></a>
+                    <a class='me-3 fs-3' href='https://www.youtube.com/skulenite' target='_blank'><i class="bi bi-youtube"></i></a>
+                    <a class='me-3 fs-3' href='mailto:skulenite@skule.ca' target='_blank'><i class="bi bi-envelope"></i></a>
+                </div>
+                <div class='me-5 align-middle my-auto'>
+                    <span class='text-muted align-middle fs-6'>Website designed by Gabe Sher, from home 💜</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

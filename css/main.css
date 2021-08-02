@@ -360,7 +360,7 @@ body {
 /* Fonts */
 @font-face {
     font-family: "Jaspers";
-    src: url('../../static/fonts/Jaspers.ttf');
+    src: url('../fonts/Jaspers.ttf');
 }
 
 .logo-font {
